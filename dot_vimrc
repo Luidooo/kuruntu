@@ -17,6 +17,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/django.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'wakatime/vim-wakatime'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
