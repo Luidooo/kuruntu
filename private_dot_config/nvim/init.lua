@@ -121,6 +121,7 @@ vim.keymap.set("n", "QA", "<cmd>qa<CR>") --"NERDtree")
 
 -- Keymap to open terminal
 vim.keymap.set("n", "<C-t>", "<cmd>vertical term<CR>") --"NERDtree")
+vim.keymap.set("n", "<C-y>", "<cmd>horizontal term<CR>") --"NERDtree")
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows

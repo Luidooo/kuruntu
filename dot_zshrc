@@ -120,6 +120,7 @@ alias rdown="shutdown -r now"
 alias gs="git status"
 alias gp="git push origin main"
 alias chezrc="chezmoi edit ~/.zshrc"
+alias rmlatex = "rm *.out *.log *.aux"
 
 
 eval "$(zoxide init zsh)"
