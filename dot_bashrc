@@ -134,6 +134,18 @@ eval "$(zoxide init bash)"
 #export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64\
                          #${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
+bind 'TAB:menu-complete'
+bind '"\e[Z": menu-complete-backward'
+
+# Display a list of the matching files
+bind "set show-all-if-ambiguous on"
+
+# Perform partial (common) completion on the first Tab press, only start
+# cycling full results on the second Tab press (from bash version 5)
+bind "set menu-complete-display-prefix on"
+
+
+
 parse_git_branch() {
    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
