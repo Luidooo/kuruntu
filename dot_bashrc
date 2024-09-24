@@ -136,13 +136,24 @@ eval "$(zoxide init bash)"
 
 bind 'TAB:menu-complete'
 bind '"\e[Z": menu-complete-backward'
-
-# Display a list of the matching files
 bind "set show-all-if-ambiguous on"
-
-# Perform partial (common) completion on the first Tab press, only start
-# cycling full results on the second Tab press (from bash version 5)
 bind "set menu-complete-display-prefix on"
+
+
+#wana to swap esc and caps on a debian based distro?
+
+# cd /etc/X11/xorg.conf.d
+# nvim 00-keyboard.conf
+# write this on the file
+#   
+# Section "InputClass"
+#    Identifier "keyboard_layout"
+#    MatchIsKeyboard "yes"
+#    Option "XkbOptions" "caps:swapescape"
+# EndSection
+
+
+
 
 
 
