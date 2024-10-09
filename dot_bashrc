@@ -96,6 +96,7 @@ alias lsl='ls -w 1'
 alias cl='clear'
 alias gs='git status'
 alias clip='xclip -sel c'
+alias bhist='cat ~/.bash_history | grep -i '
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -153,6 +154,21 @@ bind "set menu-complete-display-prefix on"
 # EndSection
 
 
+# Load pyenv automatically by appending
+# the following to 
+# ~/.bash_profile if it exists, otherwise ~/.profile (for login shells)
+# and ~/.bashrc (for interactive shells) :
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Restart your shell for the changes to take effect.
+
+# Load pyenv-virtualenv automatically by adding
+# the following to ~/.bashrc:
+
+eval "$(pyenv virtualenv-init -)"
 
 
 
