@@ -97,6 +97,8 @@ alias cl='clear'
 alias gs='git status'
 alias clip='xclip -sel c'
 alias bhist='cat ~/.bash_history | grep -i '
+alias sshbr='ssh ibtimlnx@192.168.2.90'
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
