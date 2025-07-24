@@ -9,7 +9,6 @@ CONFIG_DIR="$HOME/.config"
 GH_USER="Luidooo"
 SSH_EMAIL="eng.limaluis@gmail.com"
 MACHINE_NAME="test"
-WAKATIME_KEY="waka_c659b22a-8afb-478f-8296-d9ecbea4a33f"
 
 print() {
   local GREEN='\033[0;32m'
@@ -77,7 +76,7 @@ install_nvim() {
   rm -rf "$CONFIG_DIR/nvim"
   cp -r "$DOTFILES/dot_nvim/" "$CONFIG_DIR/nvim/"
   echo "For use wakatime, copy this api key and paste in the neovim"
-  ehco $WAKATIME_KEY
+  #echo $WAKATIME_KEY
   verify "Neovim"
 }
 

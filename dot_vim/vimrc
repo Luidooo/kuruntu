@@ -18,5 +18,3 @@ Plug 'wakatime/vim-wakatime'
 " Initialize the plugin system
 call plug#end()
 
-" Example: Your WakaTime API key
-let g:wakatime_api_key = 'waka_c659b22a-8afb-478f-8296-d9ecbea4a33f'
