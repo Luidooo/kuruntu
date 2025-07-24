@@ -9,7 +9,7 @@ CONFIG_DIR="$HOME/.config"
 GH_USER="Luidooo"
 SSH_EMAIL="eng.limaluis@gmail.com"
 MACHINE_NAME="test"
-WAKATIME_KEY="waka_c659b22a-8afb-478f-8296-d9ecbea4a33f"
+WAKATIME_KEY=""
 
 print() {
   local GREEN='\033[0;32m'
@@ -85,6 +85,7 @@ install_vim() {
   sudo apt install vim -y
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  cp -r "$DOTFILES/dot_vim/" "$CONFIG_DIR/vim/"
 
 }
 
@@ -124,6 +125,11 @@ main() {
   sudo apt upgrade -Y
   utilities
   clone_dotfiles
+  setting_ssh
+  install_vim
+  install_nvim
+  docker
+
 }
 
 main
