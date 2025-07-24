@@ -4,9 +4,12 @@ SUCESS="0"
 INFO="1"
 LINE="======================================================="
 
-DOTFILES="$HOME/.config/dotfiles/"
-CONFIG_DIR="$HOME/.config/"
+DOTFILES="$HOME/.config/dotfiles"
+CONFIG_DIR="$HOME/.config"
 GH_USER="Luidooo"
+SSH_EMAIL="eng.limaluis@gmail.com"
+MACHINE_NAME="test"
+WAKATIME_KEY="waka_c659b22a-8afb-478f-8296-d9ecbea4a33f"
 
 print() {
   local GREEN='\033[0;32m'
@@ -70,20 +73,20 @@ docker() {
 
 install_nvim() {
   print $INFO "Neovim"
-  sudo snap install neovim --classic
+  sudo snap install nvim --classic
   rm -rf "$CONFIG_DIR/nvim"
-  cp -r "$DOTFILES/nvim/" "$CONFIG_DIR/nvim/"
+  cp -r "$DOTFILES/dot_nvim/" "$CONFIG_DIR/nvim/"
+  echo "For use wakatime, copy this api key and paste in the neovim"
+  ehco $WAKATIME_KEY
   verify "Neovim"
 }
 
 install_vim() {
   sudo apt install vim -y
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 }
-
-#config_ssh() {
-#
-#}
 
 utilities() {
   print "Starting to dowload the most useful packages (utiiles) "
@@ -94,14 +97,26 @@ utilities() {
   curl
   figlet
   cmatrix
-  verify "Utilities downloaded!"
+  verify "Utilities!"
 
 }
 
 setting_ssh() {
-  print "Setting the ssh utilities"
+  print "ssh utilities"
   sudo apt install -y ssh
-  ssh keygen
+  ssh-keygen -t ed25519 -C $SSH_EMAIL
+  print $INFO "This is your ssh pub key, you can see using 'cat ~/.ssh/id_ed25519.pub
+'"
+  cat ~/.ssh/id_ed25519.pub
+  verify "SSH"
+}
+
+setting_gh() {
+  print "Github CLI(gh)"
+  sudo apt install gh -Y
+  gh auth login
+  gh ssh-key add ~/.ssh/id_ed25519.pub -t $MACHINE_NAME
+  verify "Github CLI(gh)"
 }
 
 main() {

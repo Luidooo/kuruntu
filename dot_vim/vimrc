@@ -1,0 +1,22 @@
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - For Vim:    ~/.vim/plugged
+call plug#begin('~/.config/vim/plugged')
+
+" ------------------------------------------------------------------
+"  Add your list of plugins here
+" ------------------------------------------------------------------
+" Example: A popular file explorer plugin
+Plug 'preservim/nerdtree'
+
+" Example: The WakaTime plugin from our last conversation
+Plug 'wakatime/vim-wakatime'
+
+
+" ...add more plugins here in the same format
+
+" Initialize the plugin system
+call plug#end()
+
+" Example: Your WakaTime API key
+let g:wakatime_api_key = 'waka_c659b22a-8afb-478f-8296-d9ecbea4a33f'

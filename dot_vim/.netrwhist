@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/luid/trabalho/Lyra/lyra-api/spec/requests/api/v1'
+let g:netrw_dirhist_9='/home/luid/setup'
+let g:netrw_dirhist_8='/home/luid/trabalho/tomography/hapi-1/ct-main'
+let g:netrw_dirhist_7='/home/luid/trabalho/tomography/hapi-1'
+let g:netrw_dirhist_6='/home/luid/trabalho/tomography/hapi-1/ct-main'
+let g:netrw_dirhist_5='/home/luid/trabalho/tomography/hapi-1/ct-main/src/ct_machine/process'
+let g:netrw_dirhist_4='/home/luid/trabalho/tomography/hapi-1/ct-main/src/ct_machine'
+let g:netrw_dirhist_3='/home/luid/trabalho/tomography/hapi-1/ct-main/src/ct_machine/controllers'
+let g:netrw_dirhist_2='/home/luid/trabalho/tomography/hapi-1/ct-main/src/ct_machine'
+let g:netrw_dirhist_1='/home/luid/trabalho/tomography/hapi-1/ct-main/src/ct_machine/schemas'
