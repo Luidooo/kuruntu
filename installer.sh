@@ -164,11 +164,11 @@ main() {
   verify "Upgrade"
   utilities
   clone_dotfiles
-  #setting_bash
+  setting_bash
   setting_ssh
-  #install_vim
+  install_vim
   install_nvim
-  #install_docker
+  install_docker
 
 }
 
