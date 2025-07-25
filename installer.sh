@@ -9,7 +9,7 @@ CONFIG_DIR="$HOME/.config"
 GH_USER="Luidooo"
 SSH_EMAIL="eng.limaluis@gmail.com"
 MACHINE_NAME="test"
-WAKATIME_KEY=""
+WAKATIME_KEY="acho mesmo que ia pegar aqui é"
 
 print() {
   local GREEN='\033[0;32m'
@@ -74,7 +74,9 @@ install_docker() {
 install_nvim() {
   print $INFO "Neovim"
   sudo snap install nvim --classic
-  rm -rf "$CONFIG_DIR/nvim"
+  if [ -d "$CONFIG_DIR/nvim" ]; then
+    rm -rf "$CONFIG_DIR/nvim"
+  fi
   cp -r "$DOTFILES/dot_nvim" "$CONFIG_DIR/nvim"
   echo "For use wakatime, copy this api key and paste in the neovim"
   echo $WAKATIME_KEY
@@ -83,9 +85,10 @@ install_nvim() {
 
 install_vim() {
   sudo apt install vim -y
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  cp -r "$DOTFILES/dot_vim/" "$CONFIG_DIR/vim/"
+  if [ -d "$HOME/.vim"]; then
+    rm -rf "$HOME/.vim/"
+  fi
+  cp -r "$DOTFILES/dot_vim/" "$HOME/.vim/"
 
 }
 
@@ -124,8 +127,14 @@ setting_gh() {
 
 setting_bash() {
   print "Bashrc"
-  rm ~/.bashrc
-  cp "$DOTFILES/dot_bashrc" "~/.bashrc"
+  if [ -f "$HOME/.bashrc"]; then
+    rm ~/.bashrc
+  fi
+  if [ -f "$HOME/.bash_aliases"]; then
+    rm ~/.bash_aliases
+  fi
+  cp "$DOTFILES/dot_bashrc" "$HOME/.bashrc"
+  cp "$DOTFILES/dot_bash_aliases" "$HOME/.bash_aliases"
   source ~/.bashrc
   verify "Bashrc"
 }
