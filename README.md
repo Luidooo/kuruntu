@@ -1,4 +1,3 @@
-# 💤 LazyVim
+#this is cool as fuck
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+# make the verificarion if already have the types

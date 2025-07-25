@@ -54,7 +54,7 @@ clone_dotfiles() {
   verify "Dotfiles"
 }
 
-docker() {
+install_docker() {
   print $INFO "Docker"
   sudo install -m 0755 -d /etc/apt/keyrings
   sudo wget -qO /etc/apt/keyrings/docker.asc https://download.docker.com/linux/ubuntu/gpg
@@ -75,7 +75,7 @@ install_nvim() {
   print $INFO "Neovim"
   sudo snap install nvim --classic
   rm -rf "$CONFIG_DIR/nvim"
-  cp -r "$DOTFILES/dot_nvim/" "$CONFIG_DIR/nvim/"
+  cp -r "$DOTFILES/dot_nvim" "$CONFIG_DIR/nvim"
   echo "For use wakatime, copy this api key and paste in the neovim"
   echo $WAKATIME_KEY
   verify "Neovim"
@@ -91,13 +91,13 @@ install_vim() {
 
 utilities() {
   print "Starting to dowload the most useful packages (utiiles) "
-  sudo apt install -y
-  tree
-  unzip
-  git
-  curl
-  figlet
-  cmatrix
+  sudo apt install \
+    tree \
+    unzip \
+    git \
+    curl \
+    figlet \
+    cmatrix -y
   verify "Utilities!"
 
 }
@@ -105,7 +105,9 @@ utilities() {
 setting_ssh() {
   print "ssh utilities"
   sudo apt install -y ssh
-  ssh-keygen -t ed25519 -C $SSH_EMAIL
+  if [ ! -f $HOME/.ssh/id_ed25519.pub ]; then
+    ssh-keygen -t ed25519 -C $SSH_EMAIL
+  fi
   print $INFO "This is your ssh pub key, you can see using 'cat ~/.ssh/id_ed25519.pub
 '"
   cat ~/.ssh/id_ed25519.pub
@@ -120,15 +122,53 @@ setting_gh() {
   verify "Github CLI(gh)"
 }
 
+setting_bash() {
+  print "Bashrc"
+  rm ~/.bashrc
+  cp "$DOTFILES/dot_bashrc" "~/.bashrc"
+  source ~/.bashrc
+  verify "Bashrc"
+}
+
+install_ruby() {
+  echo "ai toma"
+}
+
+install_node() {
+  print "Setting Node"
+
+  if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
+    print "NVM not found. Installing NVM..."
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  else
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  fi
+
+  print_info "Installing and setting up Node.js v18..."
+  nvm install 18
+  nvm use 18
+  nvm alias default 18
+
+  print "Node.js v18 is configured and ready to use."
+}
+
 main() {
-  sudo apt update -Y
-  sudo apt upgrade -Y
+  print $INFO "Update"
+  sudo apt update -y
+  verify "Update"
+  print $INFO "Upgrade"
+  sudo apt upgrade -y
+  verify "Upgrade"
   utilities
   clone_dotfiles
+  #setting_bash
   setting_ssh
-  install_vim
+  #install_vim
   install_nvim
-  docker
+  #install_docker
 
 }
 
