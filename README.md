@@ -1,13 +1,17 @@
-#this is cool as fuck
+vamos seguir o seguinte padrao:
 
-# make the verificarion if already have the types
+wget <url> > init.sh
 
+init.sh
+  - clona o dotfiles, setá as variables globais e roda o install.sh
 
-#installer to do
- - Node
- - Ruby
- - nvim 
- - cargo 
- - rust
- - sql 
- - 
+install.sh
+  - faz o install/setting de todos os programas que estiverem na pasta install
+    
+
+dotfiles/
+├── install/
+├── dots/ 
+├── utils/
+├── init.sh
+└── README.md

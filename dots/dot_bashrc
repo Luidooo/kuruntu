@@ -172,5 +172,9 @@ PROMPT_COMMAND=git_branch_name
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
+### para reverter tudo
+#gsettings set org.gnome.desktop.input-sources xkb-options "[]"
 ### swap caps lock to esc
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+## ver as configs
+#gsettings get org.gnome.desktop.input-sources xkb-options

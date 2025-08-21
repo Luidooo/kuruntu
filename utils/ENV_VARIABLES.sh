@@ -1,0 +1,11 @@
+ERROR="-1"
+SUCESS="0"
+INFO="1"
+LINE="======================================================="
+
+DOTFILES="$HOME/.config/dotfiles"
+CONFIG_DIR="$HOME/.config"
+GH_USER="Luidooo"
+SSH_EMAIL="eng.limaluis@gmail.com"
+MACHINE_NAME="test"
+WAKATIME_KEY="acho mesmo que ia pegar aqui é"

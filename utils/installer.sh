@@ -133,7 +133,7 @@ setting_bash() {
   if [ -f "$HOME/.bash_aliases"]; then
     rm ~/.bash_aliases
   fi
-  cp "$DOTFILES/dot_bashrc" "$HOME/.bashrc"
+  #cp "$DOTFILES/dot_bashrc" "$HOME/.bashrc"
   cp "$DOTFILES/dot_bash_aliases" "$HOME/.bash_aliases"
   source ~/.bashrc
   verify "Bashrc"
@@ -174,10 +174,11 @@ main() {
   utilities
   clone_dotfiles
   setting_bash
-  setting_ssh
-  install_vim
+  # setting_ssh
+  # install_vim
   install_nvim
-  install_docker
+  # install_docker
+  setting_ssh
 
 }
 
