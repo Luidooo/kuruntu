@@ -166,6 +166,10 @@ git_branch_name() {
 }
 git_branch_name
 
+httpcats() {
+  google-chrome "https://http.cat/$1"
+}
+
 PROMPT_COMMAND=git_branch_name
 
 #rvm export
