@@ -1,185 +1,170 @@
 #!/bin/bash
-ERROR="-1"
-SUCESS="0"
-INFO="1"
-LINE="======================================================="
 
-DOTFILES="$HOME/.config/dotfiles"
-CONFIG_DIR="$HOME/.config"
-GH_USER="Luidooo"
-SSH_EMAIL="eng.limaluis@gmail.com"
-MACHINE_NAME="test"
-WAKATIME_KEY="acho mesmo que ia pegar aqui é"
+# Exit on error
+set -e
 
+# Variables
+INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../install"
+
+# Function to print messages
 print() {
   local GREEN='\033[0;32m'
   local YELLOW='\033[1;33m'
   local RED='\033[0;31m'
   local NO_COLOR='\033[0m'
+  local MESSAGE=$2
+  local STATUS=$1
 
-  if [ $1 -eq "$ERROR" ]; then
-    echo -e "${RED}$LINE${NO_COLOR}"
-    echo -e "${RED}[ERROR] - $2${NO_COLOR}"
-    echo -e "${RED}$LINE${NO_COLOR}"
+  case $STATUS in
+  "SUCCESS")
+    echo -e "${GREEN}=======================================================${NO_COLOR}"
+    echo -e "${GREEN}[SUCCESS] - $MESSAGE!${NO_COLOR}"
+    echo -e "${GREEN}=======================================================${NO_COLOR}"
+    ;;
+  "ERROR")
+    echo -e "${RED}=======================================================${NO_COLOR}"
+    echo -e "${RED}[ERROR] - $MESSAGE${NO_COLOR}"
+    echo -e "${RED}=======================================================${NO_COLOR}"
+    ;;
+  "INFO")
+    echo "======================================================="
+    echo -e "[INFO] - $MESSAGE"
+    echo "======================================================="
+    ;;
+  esac
+}
 
-  else
-    if [ $1 -eq "$SUCESS" ]; then
-      echo -e "${GREEN}$LINE${NO_COLOR}"
-      echo -e "${GREEN}[SUCESS] - $2!${NO_COLOR}"
-      echo -e "${GREEN}$LINE${NO_COLOR}"
+# Function to run install scripts
+run_install() {
+  local script_name=$1
+  local script_path="$INSTALL_DIR/$script_name.sh"
 
+  if [ -f "$script_path" ]; then
+    print "INFO" "Running $script_name"
+    bash "$script_path"
+    if [ $? -eq 0 ]; then
+      print "SUCCESS" "$script_name"
     else
-      echo $LINE
-      echo -e "[INFO] - Setting $2!"
-      echo $LINE
-
+      print "ERROR" "Failed to run $script_name"
+      exit 1
     fi
-  fi
-}
-
-verify() {
-  if [ $? -eq 0 ]; then
-    print $SUCESS "$1"
   else
-    print $ERROR "Error! See the last [INFO] for more information!"
-    echo $2
+    print "ERROR" "Installation script for $script_name not found"
   fi
-
 }
 
-clone_dotfiles() {
-  print $INFO "Cloning the $GH_USER dotfiles from github..."
-  rm -rf $DOTFILES
-  git clone "https://github.com/$GH_USER/dotfiles.git" $DOTFILES
-  verify "Dotfiles"
+# Main menu
+main_menu() {
+  CHOICE=$(gum choose "Editors" "Programming Languages" "Web Development Tools" "Databases" "Exit")
+
+  case "$CHOICE" in
+  "Editors")
+    editors_menu
+    ;;
+  "Programming Languages")
+    languages_menu
+    ;;
+  "Web Development Tools")
+    web_tools_menu
+    ;;
+  "Databases")
+    databases_menu
+    ;;
+  "Exit")
+    exit 0
+    ;;
+  esac
 }
 
-install_docker() {
-  print $INFO "Docker"
-  sudo install -m 0755 -d /etc/apt/keyrings
-  sudo wget -qO /etc/apt/keyrings/docker.asc https://download.docker.com/linux/ubuntu/gpg
-  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
-  sudo apt update
-  sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
-  sudo usermod -aG docker ${USER}
-  verify "Docker"
+# Editors menu
+editors_menu() {
+  CHOICES=$(gum choose --no-limit "Neovim" "Vim" "Back" \
+    --selected "Neovim,Vim")
 
+  for CHOICE in $CHOICES; do
+    case "$CHOICE" in
+    "Neovim")
+      run_install "editors/neovim"
+      ;;
+    "Vim")
+      run_install "editors/vim"
+      ;;
+    "Back")
+      main_menu
+      ;;
+    esac
+  done
+  main_menu
 }
 
-#virtualization() {
-#TODO: set kvm, qemu e virsh
-#TODO: maybe install some famous isos two
-#}
+# Programming Languages menu
+languages_menu() {
+  CHOICES=$(gum choose --no-limit "Ruby" "Node" "Rust" "Back")
 
-install_nvim() {
-  print $INFO "Neovim"
-  sudo snap install nvim --classic
-  if [ -d "$CONFIG_DIR/nvim" ]; then
-    rm -rf "$CONFIG_DIR/nvim"
-  fi
-  cp -r "$DOTFILES/dot_nvim" "$CONFIG_DIR/nvim"
-  echo "For use wakatime, copy this api key and paste in the neovim"
-  echo $WAKATIME_KEY
-  verify "Neovim"
+  for CHOICE in $CHOICES; do
+    case "$CHOICE" in
+    "Ruby")
+      run_install "languages/ruby"
+      ;;
+    "Node")
+      run_install "languages/node"
+      ;;
+    "Rust")
+      run_install "languages/rust"
+      ;;
+    "Back")
+      main_menu
+      ;;
+    esac
+  done
+  main_menu
 }
 
-install_vim() {
-  sudo apt install vim -y
-  if [ -d "$HOME/.vim"]; then
-    rm -rf "$HOME/.vim/"
-  fi
-  cp -r "$DOTFILES/dot_vim/" "$HOME/.vim/"
+# Web Development Tools menu
+web_tools_menu() {
+  CHOICES=$(gum choose --no-limit "Docker" "Postman" "Back")
 
+  for CHOICE in $CHOICES; do
+    case "$CHOICE" in
+    "Docker")
+      run_install "web/docker"
+      ;;
+    "Postman")
+      run_install "web/postman"
+      ;;
+    "Back")
+      main_menu
+      ;;
+    esac
+  done
+  main_menu
 }
 
-utilities() {
-  print "Starting to dowload the most useful packages (utiiles) "
-  sudo apt install \
-    tree \
-    unzip \
-    git \
-    curl \
-    figlet \
-    cmatrix -y
-  verify "Utilities!"
+# Databases menu
+databases_menu() {
+  CHOICES=$(gum choose --no-limit "MySQL" "PostgreSQL" "Redis" "Back")
 
+  for CHOICE in $CHOICES; do
+    case "$CHOICE" in
+    "MySQL")
+      run_install "databases/mysql"
+      ;;
+    "PostgreSQL")
+      run_install "databases/postgresql"
+      ;;
+    "Redis")
+      run_install "databases/redis"
+      ;;
+    "Back")
+      main_menu
+      ;;
+    esac
+  done
+  main_menu
 }
 
-setting_ssh() {
-  print "ssh utilities"
-  sudo apt install -y ssh
-  if [ ! -f $HOME/.ssh/id_ed25519.pub ]; then
-    ssh-keygen -t ed25519 -C $SSH_EMAIL
-  fi
-  print $INFO "This is your ssh pub key, you can see using 'cat ~/.ssh/id_ed25519.pub
-'"
-  cat ~/.ssh/id_ed25519.pub
-  verify "SSH"
-}
+# Run gum installer
+bash "$INSTALL_DIR/../utils/required/gum.sh"
 
-setting_gh() {
-  print "Github CLI(gh)"
-  sudo apt install gh -Y
-  gh auth login
-  gh ssh-key add ~/.ssh/id_ed25519.pub -t $MACHINE_NAME
-  verify "Github CLI(gh)"
-}
-
-setting_bash() {
-  print "Bashrc"
-  if [ -f "$HOME/.bashrc"]; then
-    rm ~/.bashrc
-  fi
-  if [ -f "$HOME/.bash_aliases"]; then
-    rm ~/.bash_aliases
-  fi
-  #cp "$DOTFILES/dot_bashrc" "$HOME/.bashrc"
-  cp "$DOTFILES/dot_bash_aliases" "$HOME/.bash_aliases"
-  source ~/.bashrc
-  verify "Bashrc"
-}
-
-install_ruby() {
-  echo "ai toma"
-}
-
-install_node() {
-  print "Setting Node"
-
-  if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
-    print "NVM not found. Installing NVM..."
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  else
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  fi
-
-  print_info "Installing and setting up Node.js v18..."
-  nvm install 18
-  nvm use 18
-  nvm alias default 18
-
-  print "Node.js v18 is configured and ready to use."
-}
-
-main() {
-  print $INFO "Update"
-  sudo apt update -y
-  verify "Update"
-  print $INFO "Upgrade"
-  sudo apt upgrade -y
-  verify "Upgrade"
-  utilities
-  clone_dotfiles
-  setting_bash
-  # setting_ssh
-  # install_vim
-  install_nvim
-  # install_docker
-  setting_ssh
-
-}
-
-main
+# Start the main menu
+main_menu
