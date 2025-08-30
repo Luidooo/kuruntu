@@ -2,19 +2,22 @@
 
 set -e
 
-DOTFILES_DIR="$HOME/.local/share/dotfiles"
+KURUNTU_DIR="$HOME/.local/share/dotfiles"
 REPO_URL="https://github.com/luidooo/dotfiles.git"
 
-if [ -d "$DOTFILES_DIR" ]; then
+if [ -d "$KURUNTU_DIR" ]; then
   echo "Dotfiles directory already exists. Pulling latest changes."
-  cd "$DOTFILES_DIR"
-  git pull
+  cd "$KURUNTU_DIR"
+  echo "git pull"
 else
   echo "Cloning dotfiles repository."
-  sudo git clone "$REPO_URL" "$DOTFILES_DIR"
+  sudo git clone "$REPO_URL" "$KURUNTU_DIR"
 fi
 
-cd "$DOTFILES_DIR"
+cd "$KURUNTU_DIR"
+
+bash $KURUNTU_DIR/utils/ascii.sh
+echo -e "\033[0m"
 
 echo "Running the installer."
-bash utils/installer.sh
+#bash utils/installer.sh

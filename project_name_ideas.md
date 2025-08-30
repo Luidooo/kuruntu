@@ -1,3 +1,7 @@
+Kurumin -> Kuruntu
+
+
+
 # Ideias de Nomes para Projeto de Configuração Ubuntu com Toque Brasileiro
 
 Este arquivo reúne as principais sugestões de nomes para um projeto de configuração de ambiente Ubuntu, inspirado em "omakub", com foco em nomes de origem indígena (Tupi-Guarani) e suas fusões com a palavra "Ubuntu".

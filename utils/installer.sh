@@ -55,11 +55,11 @@ run_install() {
 
 # Main menu
 main_menu() {
-  CHOICE=$(gum choose "Editors" "Programming Languages" "Web Development Tools" "Databases" "Exit")
+  CHOICE=$(gum choose "IDE's" "Programming Languages" "Web Development Tools" "Databases" "Exit")
 
   case "$CHOICE" in
   "Editors")
-    editors_menu
+    ides_menu
     ;;
   "Programming Languages")
     languages_menu
@@ -89,7 +89,7 @@ editors_menu() {
     "Vim")
       run_install "editors/vim"
       ;;
-    "Back")
+    "<- Back")
       main_menu
       ;;
     esac
@@ -132,7 +132,7 @@ web_tools_menu() {
     "Postman")
       run_install "web/postman"
       ;;
-    "Back")
+    "<- Back")
       main_menu
       ;;
     esac
@@ -155,7 +155,7 @@ databases_menu() {
     "Redis")
       run_install "databases/redis"
       ;;
-    "Back")
+    "<- Back")
       main_menu
       ;;
     esac
