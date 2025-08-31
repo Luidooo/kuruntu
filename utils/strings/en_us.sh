@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# WELCOME SCRIPT STRINGS
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-export WELCOME_HEADER="👋 Welcome to the Dotfiles Installer!"
+export WELCOME_HEADER="Welcome to the Kuruntu Installer!"
 export WELCOME_BODY="This script will guide you through the installation and configuration of the environment.
 
 It uses 'gum' to create interactive menus. Here’s how it works:
@@ -16,10 +12,6 @@ It uses 'gum' to create interactive menus. Here’s how it works:
 The script will pause at each step requiring your input. Please stay tuned to make your selections as needed.
 "
 export WELCOME_CONFIRM_QUESTION="Ready to start?"
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# MAIN MENU STRINGS
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 export MAIN_MENU_HEADER="🛠️ Main Installation Menu"
 export MAIN_MENU_BODY="Select the components you want to install.

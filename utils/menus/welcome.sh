@@ -1,7 +1,6 @@
 #!/bin/bash
 
-source "$(dirname "$0")/utils/strings/en_us.sh"
-
+source "$KURUNTU_PATH/utils/strings/en_us.sh"
 clear
 
 gum style \
@@ -13,4 +12,4 @@ gum style \
 
 gum confirm "$WELCOME_CONFIRM_QUESTION" || exit 0
 
-"$(dirname "$0")/scripts/main_menu.sh"
+bash "$KURUNTU_PATH/utils/menus/mains_menu.sh"

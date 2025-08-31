@@ -2,22 +2,22 @@
 
 set -e
 
-KURUNTU_DIR="$HOME/.local/share/dotfiles"
-REPO_URL="https://github.com/luidooo/dotfiles.git"
+export KURUNTU_PATH="$HOME/.local/share/kuruntu"
+REPO_URL="https://github.com/luidooo/kuruntu.git"
 
-if [ -d "$KURUNTU_DIR" ]; then
-  echo "Dotfiles directory already exists. Pulling latest changes."
-  cd "$KURUNTU_DIR"
-  echo "git pull"
+if [ -d "$KURUNTU_PATH" ]; then
+  echo "Kuruntu directory already exists. Pulling latest changes."
+  cd "$KURUNTU_PATH"
+  echo "git pull" #debug
 else
   echo "Cloning dotfiles repository."
-  sudo git clone "$REPO_URL" "$KURUNTU_DIR"
+  echo "sudo git clone " #$ $REPO_URL" "$KURUNTU_PATH"" #debug
 fi
 
-cd "$KURUNTU_DIR"
+cd "$KURUNTU_PATH"
 
-bash $KURUNTU_DIR/utils/ascii.sh
+bash $KURUNTU_PATH/utils/ascii.sh
 echo -e "\033[0m"
 
-echo "Running the installer."
-#bash utils/installer.sh
+bash "$KURUNTU_PATH/utils/menus/welcome.sh"
+#bash "$KURUNTU_PATH/utils/installer.sh"

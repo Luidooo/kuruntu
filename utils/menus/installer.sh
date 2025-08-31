@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Exit on error
 set -e
 
-# Variables
 INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../install"
 
 # Function to print messages
@@ -53,9 +51,8 @@ run_install() {
   fi
 }
 
-# Main menu
 main_menu() {
-  CHOICE=$(gum choose "IDE's" "Programming Languages" "Web Development Tools" "Databases" "Exit")
+  CHOICE=$(gum choose "IDE's" "Programming Languages" "Development Tools" "Applications" "Databases" "Terminal tools" "Exit")
 
   case "$CHOICE" in
   "Editors")
@@ -76,9 +73,8 @@ main_menu() {
   esac
 }
 
-# Editors menu
 editors_menu() {
-  CHOICES=$(gum choose --no-limit "Neovim" "Vim" "Back" \
+  CHOICES=$(gum choose --no-limit "Neovim" "Vim" "<- Back" \
     --selected "Neovim,Vim")
 
   for CHOICE in $CHOICES; do
@@ -89,6 +85,10 @@ editors_menu() {
     "Vim")
       run_install "editors/vim"
       ;;
+    "Vscode")
+      #run_install "editors/vscode"
+      echo "kkkkkkkkkkkkkkkkk acho que tinha é, vai aprender a usar o vim meu fi"
+      ;;
     "<- Back")
       main_menu
       ;;
@@ -97,9 +97,8 @@ editors_menu() {
   main_menu
 }
 
-# Programming Languages menu
 languages_menu() {
-  CHOICES=$(gum choose --no-limit "Ruby" "Node" "Rust" "Back")
+  CHOICES=$(gum choose --no-limit "Ruby" "Node" "Rust" "<- Back")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
@@ -120,7 +119,6 @@ languages_menu() {
   main_menu
 }
 
-# Web Development Tools menu
 web_tools_menu() {
   CHOICES=$(gum choose --no-limit "Docker" "Postman" "Back")
 
@@ -140,7 +138,6 @@ web_tools_menu() {
   main_menu
 }
 
-# Databases menu
 databases_menu() {
   CHOICES=$(gum choose --no-limit "MySQL" "PostgreSQL" "Redis" "Back")
 
@@ -163,8 +160,6 @@ databases_menu() {
   main_menu
 }
 
-# Run gum installer
 bash "$INSTALL_DIR/../utils/required/gum.sh"
 
-# Start the main menu
 main_menu
