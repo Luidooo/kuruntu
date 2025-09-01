@@ -4,7 +4,7 @@ set -e
 
 #sudo apt update -y
 #sudo apt upgrade -y
-sudo apt install -y curl git unzip
+sudo apt install -y curl git
 
 export KURUNTU_PATH="$HOME/.local/share/kuruntu"
 REPO_URL="https://github.com/luidooo/kuruntu.git"

@@ -10,6 +10,12 @@ cd -
 # Create Zellij config directories
 mkdir -p ~/.config/zellij/themes
 
+KURUNTU_PATH="$HOME/.local/share/kuruntu"
+
 KURUNTU_DOTS="$(dirname "${BASH_SOURCE[0]}")/../../dots"
-[ ! -f "$HOME/.config/zellij/config.kdl" ] && cp "$KURUNTU_DOTS/dot_zellij/config.kdl" ~/.config/zellij/config.kdl
-cp "$KURUNTU_DOTS/dot_zellij/themes/tokyo-night.kdl" ~/.config/zellij/themes/tokyo-night.kdl
+if [ -f "$HOME/.config/zellij/config.kdl" ]; then
+  rm "$HOME/.config/zellij/config.kdl"
+fi
+
+cp "$KURUNTU_PATH/dots/dot_zellij/config.kdl" "$HOME/.config/zellij/config.kdl"
+cp "$KURUNTU_PATH/dots/dot_zellij/themes/tokyo-night.kdl" "$HOME/.config/zellij/themes/tokyo-night.kdl"

@@ -1,9 +1,7 @@
 #!/bin/bash
 
 set -e
-
-# Set the install directory relative to this script
-INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../install"
+# Set the install directory relative to this script INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../install"
 
 # Function to print messages
 print() {

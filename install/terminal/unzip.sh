@@ -1,4 +1,4 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install -y btop
+sudo apt install -y unzip
