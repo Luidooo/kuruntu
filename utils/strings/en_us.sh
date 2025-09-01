@@ -13,7 +13,7 @@ The script will pause at each step requiring your input. Please stay tuned to ma
 "
 export WELCOME_CONFIRM_QUESTION="Ready to start?"
 
-export MAIN_MENU_HEADER="🛠️ Main Installation Menu"
+export MAIN_MENU_HEADER="Main Installation Menu"
 export MAIN_MENU_BODY="Select the components you want to install.
 You can select multiple options using the SPACEBAR."
 export MAIN_MENU_INSTALL_BUTTON="Install Selected"

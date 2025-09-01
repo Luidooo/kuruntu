@@ -7,6 +7,10 @@ sudo install zellij /usr/local/bin
 rm zellij.tar.gz zellij
 cd -
 
+# Create Zellij config directories
 mkdir -p ~/.config/zellij/themes
-[ ! -f "$HOME/.config/zellij/config.kdl" ] && cp ~/.local/share/omakub/configs/zellij.kdl ~/.config/zellij/config.kdl
-cp ~/.local/share/omakub/themes/tokyo-night/zellij.kdl ~/.config/zellij/themes/tokyo-night.kdl
+
+# Copy configs from kuruntu dots
+KURUNTU_DOTS="$(dirname "${BASH_SOURCE[0]}")/../../dots"
+[ ! -f "$HOME/.config/zellij/config.kdl" ] && cp "$KURUNTU_DOTS/dot_zellij/config.kdl" ~/.config/zellij/config.kdl
+cp "$KURUNTU_DOTS/dot_zellij/themes/tokyo-night.kdl" ~/.config/zellij/themes/tokyo-night.kdl

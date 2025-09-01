@@ -98,10 +98,31 @@ editors_menu() {
 }
 
 languages_menu() {
-  CHOICES=$(gum choose --no-limit "Ruby" "Node" "Rust" "<- Back")
+  CHOICES=$(gum choose --no-limit "Python" "Java" "TypeScript" "C#/.NET" "PHP" "Go" "Swift" "Ruby" "Node" "Rust" "<- Back")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
+    "Python")
+      run_install "languages/python"
+      ;;
+    "Java")
+      run_install "languages/java"
+      ;;
+    "TypeScript")
+      run_install "languages/typescript"
+      ;;
+    "C#/.NET")
+      run_install "languages/dotnet"
+      ;;
+    "PHP")
+      run_install "languages/php"
+      ;;
+    "Go")
+      run_install "languages/golang"
+      ;;
+    "Swift")
+      run_install "languages/swift"
+      ;;
     "Ruby")
       run_install "languages/ruby"
       ;;
@@ -111,7 +132,7 @@ languages_menu() {
     "Rust")
       run_install "languages/rust"
       ;;
-    "Back")
+    "<- Back")
       main_menu
       ;;
     esac

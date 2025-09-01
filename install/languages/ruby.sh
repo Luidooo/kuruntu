@@ -4,8 +4,8 @@
 set -e
 
 # Install mise if not already installed
-if ! command -v mise &> /dev/null; then
-  bash "$(dirname "${BASH_SOURCE[0]}")/../mise.sh"
+if ! command -v mise &>/dev/null; then
+  bash "$(dirname "${BASH_SOURCE[0]}")/../terminal/mise.sh"
 fi
 
 # Install ruby-build dependencies
@@ -20,8 +20,8 @@ DEFAULT_GEMS_FILE="$HOME/.default-gems"
 if [ ! -f "$DEFAULT_GEMS_FILE" ]; then
   echo "Creating default gems file."
   touch "$DEFAULT_GEMS_FILE"
-  echo "bundler" >> "$DEFAULT_GEMS_FILE"
-  echo "rails" >> "$DEFAULT_GEMS_FILE"
+  echo "bundler" >>"$DEFAULT_GEMS_FILE"
+  echo "rails" >>"$DEFAULT_GEMS_FILE"
 fi
 
 # Install default gems

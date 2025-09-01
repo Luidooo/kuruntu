@@ -12,4 +12,4 @@ gum style \
 
 gum confirm "$WELCOME_CONFIRM_QUESTION" || exit 0
 
-bash "$KURUNTU_PATH/utils/menus/mains_menu.sh"
+bash "$KURUNTU_PATH/utils/menus/main_menu.sh"

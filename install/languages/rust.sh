@@ -4,8 +4,8 @@
 set -e
 
 # Install mise if not already installed
-if ! command -v mise &> /dev/null; then
-  bash "$(dirname "${BASH_SOURCE[0]}")/../mise.sh"
+if ! command -v mise &>/dev/null; then
+  bash "$(dirname "${BASH_SOURCE[0]}")/../terminal/mise.sh"
 fi
 
 # Install Rust using mise

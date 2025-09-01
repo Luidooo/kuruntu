@@ -2,6 +2,10 @@
 
 set -e
 
+#sudo apt update -y
+#sudo apt upgrade -y
+sudo apt install -y curl git unzip
+
 export KURUNTU_PATH="$HOME/.local/share/kuruntu"
 REPO_URL="https://github.com/luidooo/kuruntu.git"
 
@@ -19,5 +23,11 @@ cd "$KURUNTU_PATH"
 bash $KURUNTU_PATH/utils/ascii.sh
 echo -e "\033[0m"
 
+if [ ! -f $(which gum) ]; then
+  echo "Installing GUM package - Interactive CLI menus for better user experience"
+  echo "Running: sudo snap install gum"
+  sleep 1
+  bash "$KURUNTU_PATH/utils/required/gum.sh"
+fi
+
 bash "$KURUNTU_PATH/utils/menus/welcome.sh"
-#bash "$KURUNTU_PATH/utils/installer.sh"
