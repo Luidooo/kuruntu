@@ -1,9 +1,7 @@
 #!/bin/bash
 
 set -e
-# Set the install directory relative to this script INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../install"
 
-# Function to print messages
 print() {
   local GREEN='\033[0;32m'
   local YELLOW='\033[1;33m'
@@ -31,7 +29,6 @@ print() {
   esac
 }
 
-# Function to run install scripts
 run_install() {
   local script_name=$1
   local script_path="$INSTALL_DIR/$script_name.sh"
@@ -79,11 +76,11 @@ main_menu() {
 }
 
 ides_menu() {
-  CHOICES=$(gum choose --no-limit "VSCode (Pegadinha 😈)" "Neovim" "Vim" "IntelliJ IDEA" "Sublime Text" "Emacs" "Code-OSS" "Atom (Descontinuado)" "<- Back")
+  CHOICES=$(gum choose --no-limit "Neovim" "Vim" "IntelliJ IDEA" "Sublime Text" "Emacs" "VsCode" "<- Back" --selected "Neovim,Vim")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
-    "VSCode (Pegadinha 😈)")
+    "VSCode")
       run_install "editors/vscode"
       ;;
     "Neovim")
@@ -101,12 +98,6 @@ ides_menu() {
     "Emacs")
       run_install "editors/emacs"
       ;;
-    "Code-OSS")
-      run_install "editors/code-oss"
-      ;;
-    "Atom (Descontinuado)")
-      run_install "editors/atom"
-      ;;
     "<- Back")
       main_menu
       return
@@ -117,7 +108,7 @@ ides_menu() {
 }
 
 languages_menu() {
-  CHOICES=$(gum choose --no-limit "Ruby" "Node" "Rust" "Python" "Go" "Java" "PHP" "Swift" "TypeScript" ".NET" "<- Back")
+  CHOICES=$(gum choose --no-limit "Ruby" "Node" "Rust" "Python" "Go" "Java" "PHP" "Swift" "TypeScript" ".NET" "<- Back" --selected "Ruby,Node,Python")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
@@ -161,7 +152,7 @@ languages_menu() {
 }
 
 dev_tools_menu() {
-  CHOICES=$(gum choose --no-limit "Docker" "Git" "<- Back")
+  CHOICES=$(gum choose --no-limit "Docker" "<- Back" --selected "Docker")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
@@ -181,7 +172,7 @@ dev_tools_menu() {
 }
 
 applications_menu() {
-  CHOICES=$(gum choose --no-limit "Chrome" "Hyprland" "<- Back")
+  CHOICES=$(gum choose --no-limit "Chrome" "Hyprland" "<- Back" --selected "Chrome")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
@@ -201,7 +192,7 @@ applications_menu() {
 }
 
 terminal_menu() {
-  CHOICES=$(gum choose --no-limit "Bash" "Btop" "Fonts" "Mise" "Nerd Icons" "Zellij" "<- Back")
+  CHOICES=$(gum choose --no-limit "Bash" "Btop" "Fonts" "Mise" "Nerd Icons" "Zellij" "<- Back" --selected"Btop,Nerd Icons,Zellij,Fonts,Mise")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
@@ -233,7 +224,7 @@ terminal_menu() {
 }
 
 databases_menu() {
-  CHOICES=$(gum choose --no-limit "MySQL" "PostgreSQL" "Redis" "<- Back")
+  CHOICES=$(gum choose --no-limit "MySQL" "PostgreSQL" "Redis" "<- Back" --selected"PostgreSQL,Redis")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
@@ -254,12 +245,5 @@ databases_menu() {
   done
   main_menu
 }
-
-# Check if gum is available
-if ! command -v gum &>/dev/null; then
-  print "ERROR" "gum is required but not installed. Please install gum first:"
-  echo "  https://github.com/charmbracelet/gum#installation"
-  exit 1
-fi
 
 main_menu

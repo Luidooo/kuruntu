@@ -7,7 +7,6 @@ sudo install zellij /usr/local/bin
 rm zellij.tar.gz zellij
 cd -
 
-# Create Zellij config directories
 mkdir -p ~/.config/zellij/themes
 
 KURUNTU_PATH="$HOME/.local/share/kuruntu"
