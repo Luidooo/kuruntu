@@ -2,12 +2,11 @@
 
 set -e
 
-CONFIG_DIR="$HOME/.config"
-DOTFILES_DIR="$HOME/.dotfiles"
+KURUNTU_PATH="$HOME/.local/share/kuruntu"
 
 sudo snap install nvim --classic
 
-if [ -d "$CONFIG_DIR/nvim" ]; then
-  rm -rf "$CONFIG_DIR/nvim"
+if [ -d "$KURUNTU_PATH/nvim" ]; then
+  rm -rf "$HOME/.local/nvim"
 fi
-cp -r "$DOTFILES_DIR/dots/dot_nvim" "$CONFIG_DIR/nvim"
+cp -r "$KURUNTU_PATH/dots/dot_nvim" "$HOME/.config/nvim"

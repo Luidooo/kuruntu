@@ -1,10 +1,9 @@
 #!/bin/bash
 
-echo "ta aqui"
-
 set -e
 
-#INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../install"
+# Set the install directory relative to this script
+INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../install"
 
 # Function to print messages
 print() {
@@ -57,17 +56,23 @@ main_menu() {
   CHOICE=$(gum choose "IDE's" "Programming Languages" "Development Tools" "Applications" "Databases" "Terminal tools" "Exit")
 
   case "$CHOICE" in
-  "Editors")
-    editors_menu
+  "IDE's")
+    ides_menu
     ;;
   "Programming Languages")
     languages_menu
     ;;
-  "Web Development Tools")
-    web_tools_menu
+  "Development Tools")
+    dev_tools_menu
+    ;;
+  "Applications")
+    applications_menu
     ;;
   "Databases")
     databases_menu
+    ;;
+  "Terminal tools")
+    terminal_menu
     ;;
   "Exit")
     exit 0
@@ -75,24 +80,38 @@ main_menu() {
   esac
 }
 
-editors_menu() {
-  CHOICES=$(gum choose --no-limit "Neovim" "Vim" "<- Back" \
-    --selected "Neovim,Vim")
+ides_menu() {
+  CHOICES=$(gum choose --no-limit "VSCode (Pegadinha 😈)" "Neovim" "Vim" "IntelliJ IDEA" "Sublime Text" "Emacs" "Code-OSS" "Atom (Descontinuado)" "<- Back")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
+    "VSCode (Pegadinha 😈)")
+      run_install "editors/vscode"
+      ;;
     "Neovim")
       run_install "editors/neovim"
       ;;
     "Vim")
       run_install "editors/vim"
       ;;
-    "Vscode")
-      #run_install "editors/vscode"
-      echo "kkkkkkkkkkkkkkkkk acho que tinha é, vai aprender a usar o vim meu fi"
+    "IntelliJ IDEA")
+      run_install "editors/jetbrains-idea"
+      ;;
+    "Sublime Text")
+      run_install "editors/sublime-text"
+      ;;
+    "Emacs")
+      run_install "editors/emacs"
+      ;;
+    "Code-OSS")
+      run_install "editors/code-oss"
+      ;;
+    "Atom (Descontinuado)")
+      run_install "editors/atom"
       ;;
     "<- Back")
       main_menu
+      return
       ;;
     esac
   done
@@ -136,25 +155,79 @@ languages_menu() {
       ;;
     "<- Back")
       main_menu
+      return
       ;;
     esac
   done
   main_menu
 }
 
-web_tools_menu() {
-  CHOICES=$(gum choose --no-limit "Docker" "Postman" "Back")
+dev_tools_menu() {
+  CHOICES=$(gum choose --no-limit "Docker" "Git" "<- Back")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
     "Docker")
-      run_install "web/docker"
+      run_install "development/docker"
       ;;
-    "Postman")
-      run_install "web/postman"
+    "Git")
+      print "INFO" "Git is usually pre-installed. Try: git --version"
       ;;
     "<- Back")
       main_menu
+      return
+      ;;
+    esac
+  done
+  main_menu
+}
+
+applications_menu() {
+  CHOICES=$(gum choose --no-limit "Chrome" "Hyprland" "<- Back")
+
+  for CHOICE in $CHOICES; do
+    case "$CHOICE" in
+    "Chrome")
+      run_install "applications/chrome"
+      ;;
+    "Hyprland")
+      run_install "applications/hyrland"
+      ;;
+    "<- Back")
+      main_menu
+      return
+      ;;
+    esac
+  done
+  main_menu
+}
+
+terminal_menu() {
+  CHOICES=$(gum choose --no-limit "Bash" "Btop" "Fonts" "Mise" "Nerd Icons" "Zellij" "<- Back")
+
+  for CHOICE in $CHOICES; do
+    case "$CHOICE" in
+    "Bash")
+      run_install "terminal/bash"
+      ;;
+    "Btop")
+      run_install "terminal/btop"
+      ;;
+    "Fonts")
+      run_install "terminal/fonts"
+      ;;
+    "Mise")
+      run_install "terminal/mise"
+      ;;
+    "Nerd Icons")
+      run_install "terminal/nerd-icons"
+      ;;
+    "Zellij")
+      run_install "terminal/zellij"
+      ;;
+    "<- Back")
+      main_menu
+      return
       ;;
     esac
   done
@@ -162,27 +235,33 @@ web_tools_menu() {
 }
 
 databases_menu() {
-  CHOICES=$(gum choose --no-limit "MySQL" "PostgreSQL" "Redis" "Back")
+  CHOICES=$(gum choose --no-limit "MySQL" "PostgreSQL" "Redis" "<- Back")
 
   for CHOICE in $CHOICES; do
     case "$CHOICE" in
     "MySQL")
-      run_install "databases/mysql"
+      print "INFO" "MySQL installation not implemented yet"
       ;;
     "PostgreSQL")
-      run_install "databases/postgresql"
+      print "INFO" "PostgreSQL installation not implemented yet"
       ;;
     "Redis")
-      run_install "databases/redis"
+      print "INFO" "Redis installation not implemented yet"
       ;;
     "<- Back")
       main_menu
+      return
       ;;
     esac
   done
   main_menu
 }
 
-#bash "$INSTALL_DIR/../utils/required/gum.sh"
+# Check if gum is available
+if ! command -v gum &>/dev/null; then
+  print "ERROR" "gum is required but not installed. Please install gum first:"
+  echo "  https://github.com/charmbracelet/gum#installation"
+  exit 1
+fi
 
 main_menu
