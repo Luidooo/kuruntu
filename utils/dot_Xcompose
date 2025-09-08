@@ -1,0 +1,7 @@
+include "%H/.local/share/omakub/defaults/xcompose"
+
+# Identification
+<Multi_key> <space> <n> : "Luis Eduardo "
+<Multi_key> <space> <e> : ""
+<dead_acute> <c> : "ç" ccedilla
+<dead_acute> <C> : "Ç" Ccedilla
