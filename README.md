@@ -79,10 +79,11 @@ This project is licensed under the MIT License.
 # TODO: 
   - [x] arrumar zellij
   - [x] configurar o zellij
-  - [ ] arrumar o run_install
-  - [ ] selecionar quais vão vir pre selecionados
-  - [ ] arrumar thema do gnome (cor e plano de fundo)
+  - [x] arrumar o run_install
+  - [x] selecionar quais vão vir pre selecionados
+  - [x] arrumar thema do gnome (cor e plano de fundo)
   - [ ] atalhos de print
-  - [ ] atalhos caps lock
+  - [x] arrumar o bash
+  - [x] atalhos caps lock
   - [ ] configurar gerenciador de senhas
   - [x] Arrumaŕ nerdicons

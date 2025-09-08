@@ -30,8 +30,10 @@ print() {
 }
 
 run_install() {
+
+  KURUNTU_INSTALL_PATH="$HOME/.local/share/kuruntu/install/"
   local script_name=$1
-  local script_path="$INSTALL_DIR/$script_name.sh"
+  local script_path="$KURUNTU_INSTALL_PATH/$script_name.sh"
 
   if [ -f "$script_path" ]; then
     print "INFO" "Running $script_name"
