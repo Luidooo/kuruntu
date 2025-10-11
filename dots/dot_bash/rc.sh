@@ -120,17 +120,13 @@ alias n='nvim'
 #export PATH="./bin:/home/luid/.nvm/versions/node/v22.17.0/bin:/home/luid/.pyenv/shims:/home/luid/.pyenv/bin:/home/luid/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/luid/.local/bin:/home/luid/.local/bin"
 #set +h
 alias r='./bin/rails'
-alias g='git'
-alias gcm='git commit -m'
-alias gcam='git commit -a -m'
-alias gcad='git commit -a --amend'
+
 #alias ls='eza -lh --group-directories-first --icons'
 alias ls='eza --group-directories-first --icons'
 alias lt='eza --tree --level=1 --icons --git'
 #alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
 alias bat='batcat'
 export PATH="/home/luid/.nodenv/versions/20.11.1/bin:$PATH"
-export EDITOR=nvim
 
 #branch_name() {
 #  #local BRANCH_ERROR_NAME="$(time)_branch_name.txt"
@@ -148,6 +144,9 @@ YELLOW='\[\033[1;33m\]'
 RESET='\[\033[0m\]'
 
 git_branch_name
+
+export EDITOR="nvim"
+export SUDO_EDITOR="$EDITOR"
 
 PROMPT_COMMAND=git_branch_name
 
