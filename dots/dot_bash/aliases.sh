@@ -12,6 +12,7 @@ alias gm='git commit'
 alias gcm='git commit -m'
 alias gc='git clone'
 alias gck='git checkout'
+alias gp='git push origin'
 
 #grep aliases
 alias gr='grep --color=auto'
