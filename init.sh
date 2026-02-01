@@ -15,7 +15,7 @@ if [ -d "$KURUNTU_PATH" ]; then
   echo "git pull" #debug
 else
   echo "Cloning dotfiles repository."
-  echo "sudo git clone " #$ $REPO_URL" "$KURUNTU_PATH"" #debug
+  echo "sudo git clone $REPO_URL $KURUNTU_PATH"
 fi
 
 cd "$KURUNTU_PATH"
