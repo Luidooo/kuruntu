@@ -42,5 +42,3 @@ sudo apparmor_parser -r /etc/apparmor.d/google-chrome
 
 sudo chown root:root /opt/google/chrome/chrome-sandbox
 sudo chmod 4755 /opt/google/chrome/chrome-sandbox
-
-echo -n | gnome-keyring-daemon --unlock
