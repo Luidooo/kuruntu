@@ -50,56 +50,46 @@ run_install() {
 }
 
 main_menu() {
-  CHOICE=$(gum choose "IDE's" "Programming Languages" "Development Tools" "Applications" "Databases" "Terminal tools" "Exit")
+  options=("IDE's" "Programming Languages" "Development Tools" "Applications" "Databases" "Terminal tools" "Exit")
 
-  case "$CHOICE" in
-  "IDE's")
-    ides_menu
-    ;;
-  "Programming Languages")
-    languages_menu
-    ;;
-  "Development Tools")
-    dev_tools_menu
-    ;;
-  "Applications")
-    applications_menu
-    ;;
-  "Databases")
-    databases_menu
-    ;;
-  "Terminal tools")
-    terminal_menu
-    ;;
-  "Exit")
-    exit 0
-    ;;
-  esac
+  select opt in "${options[@]}"; do
+    case $opt in
+    "IDE's")
+      ides_menu
+      ;;
+    "Programming Languages")
+      languages_menu
+      ;;
+    "Development Tools")
+      dev_tools_menu
+      ;;
+    "Applications")
+      applications_menu
+      ;;
+    "Databases")
+      databases_menu
+      ;;
+    "Terminal tools")
+      terminal_menu
+      ;;
+    "Exit")
+      exit 0
+      ;;
+    esac
+  done
 }
 
 ides_menu() {
-  CHOICES=$(gum choose --no-limit "Neovim" "Vim" "IntelliJ IDEA" "Sublime Text" "Emacs" "VsCode" "<- Back" --selected "Neovim,Vim")
+  options=("Neovim" "Vim" "IntelliJ IDEA" "Sublime Text" "Emacs" "VsCode" "<- Back")
 
-  for CHOICE in $CHOICES; do
-    case "$CHOICE" in
-    "VSCode")
-      run_install "editors/vscode"
-      ;;
+  select opt in "${options[@]}"; do
+    case $opt in
     "Neovim")
       run_install "editors/neovim"
       ;;
     "Vim")
       run_install "editors/vim"
       ;;
-    "IntelliJ IDEA")
-      run_install "editors/jetbrains-idea"
-      ;;
-    "Sublime Text")
-      run_install "editors/sublime-text"
-      ;;
-    "Emacs")
-      run_install "editors/emacs"
-      ;;
     "<- Back")
       main_menu
       return
@@ -109,143 +99,144 @@ ides_menu() {
   main_menu
 }
 
-languages_menu() {
-  CHOICES=$(gum choose --no-limit "Ruby" "Node" "Rust" "Python" "Go" "Java" "PHP" "Swift" "TypeScript" ".NET" "<- Back" --selected "Ruby,Node,Python")
-
-  for CHOICE in $CHOICES; do
-    case "$CHOICE" in
-    "Ruby")
-      run_install "languages/ruby"
-      ;;
-    "Node")
-      run_install "languages/node"
-      ;;
-    "Rust")
-      run_install "languages/rust"
-      ;;
-    "Python")
-      run_install "languages/python"
-      ;;
-    "Go")
-      run_install "languages/golang"
-      ;;
-    "Java")
-      run_install "languages/java"
-      ;;
-    "PHP")
-      run_install "languages/php"
-      ;;
-    "Swift")
-      run_install "languages/swift"
-      ;;
-    "TypeScript")
-      run_install "languages/typescript"
-      ;;
-    ".NET")
-      run_install "languages/dotnet"
-      ;;
-    "<- Back")
-      main_menu
-      return
-      ;;
-    esac
-  done
-  main_menu
-}
-
-dev_tools_menu() {
-  CHOICES=$(gum choose --no-limit "Docker" "<- Back" --selected "Docker")
-
-  for CHOICE in $CHOICES; do
-    case "$CHOICE" in
-    "Docker")
-      run_install "development/docker"
-      ;;
-    "Git")
-      print "INFO" "Git is usually pre-installed. Try: git --version"
-      ;;
-    "<- Back")
-      main_menu
-      return
-      ;;
-    esac
-  done
-  main_menu
-}
-
-applications_menu() {
-  CHOICES=$(gum choose --no-limit "Chrome" "Hyprland" "<- Back" --selected "Chrome")
-
-  for CHOICE in $CHOICES; do
-    case "$CHOICE" in
-    "Chrome")
-      run_install "applications/chrome"
-      ;;
-    "Hyprland")
-      run_install "applications/hyrland"
-      ;;
-    "<- Back")
-      main_menu
-      return
-      ;;
-    esac
-  done
-  main_menu
-}
-
-terminal_menu() {
-  CHOICES=$(gum choose --no-limit "Bash" "Btop" "Fonts" "Mise" "Nerd Icons" "Zellij" "<- Back" --selected"Btop,Nerd Icons,Zellij,Fonts,Mise")
-
-  for CHOICE in $CHOICES; do
-    case "$CHOICE" in
-    "Bash")
-      run_install "terminal/bash"
-      ;;
-    "Btop")
-      run_install "terminal/btop"
-      ;;
-    "Fonts")
-      run_install "terminal/fonts"
-      ;;
-    "Mise")
-      run_install "terminal/mise"
-      ;;
-    "Nerd Icons")
-      run_install "terminal/nerd-icons"
-      ;;
-    "Zellij")
-      run_install "terminal/zellij"
-      ;;
-    "<- Back")
-      main_menu
-      return
-      ;;
-    esac
-  done
-  main_menu
-}
-
-databases_menu() {
-  CHOICES=$(gum choose --no-limit "MySQL" "PostgreSQL" "Redis" "<- Back" --selected"PostgreSQL,Redis")
-
-  for CHOICE in $CHOICES; do
-    case "$CHOICE" in
-    "MySQL")
-      print "INFO" "MySQL installation not implemented yet"
-      ;;
-    "PostgreSQL")
-      print "INFO" "PostgreSQL installation not implemented yet"
-      ;;
-    "Redis")
-      print "INFO" "Redis installation not implemented yet"
-      ;;
-    "<- Back")
-      main_menu
-      return
-      ;;
-    esac
-  done
-  main_menu
-}
+#languages_menu() {
+#  CHOICES=$(gum choose --no-limit "Ruby" "Node" "Rust" "Python" "Go" "Java" "PHP" "Swift" "TypeScript" ".NET" "<- Back" --selected "Ruby,Node,Python")
+#
+#  for CHOICE in $CHOICES; do
+#    case "$CHOICE" in
+#    "Ruby")
+#      run_install "languages/ruby"
+#      ;;
+#    "Node")
+#      run_install "languages/node"
+#      ;;
+#    "Rust")
+#      run_install "languages/rust"
+#      ;;
+#    "Python")
+#      run_install "languages/python"
+#      ;;
+#    "Go")
+#      run_install "languages/golang"
+#      ;;
+#    "Java")
+#      run_install "languages/java"
+#      ;;
+#    "PHP")
+#      run_install "languages/php"
+#      ;;
+#    "Swift")
+#      run_install "languages/swift"
+#      ;;
+#    "TypeScript")
+#      run_install "languages/typescript"
+#      ;;
+#    ".NET")
+#      run_install "languages/dotnet"
+#      ;;
+#    "<- Back")
+#      main_menu
+#      return
+#      ;;
+#    esac
+#  done
+#  main_menu
+#}
+#
+#dev_tools_menu() {
+#  CHOICES=$(gum choose --no-limit "Docker" "<- Back" --selected "Docker")
+#
+#  for CHOICE in $CHOICES; do
+#    case "$CHOICE" in
+#    "Docker")
+#      run_install "development/docker"
+#      ;;
+#    "Git")
+#      print "INFO" "Git is usually pre-installed. Try: git --version"
+#      ;;
+#    "<- Back")
+#      main_menu
+#      return
+#      ;;
+#    esac
+#  done
+#  main_menu
+#}
+#
+#applications_menu() {
+#  CHOICES=$(gum choose --no-limit "Chrome" "Hyprland" "<- Back" --selected "Chrome")
+#
+#  for CHOICE in $CHOICES; do
+#    case "$CHOICE" in
+#    "Chrome")
+#      run_install "applications/chrome"
+#      ;;
+#    "Hyprland")
+#      run_install "applications/hyrland"
+#      ;;
+#    "<- Back")
+#      main_menu
+#      return
+#      ;;
+#    esac
+#  done
+#  main_menu
+#}
+#
+#terminal_menu() {
+#  CHOICES=$(gum choose --no-limit "Bash" "Btop" "Fonts" "Mise" "Nerd Icons" "Zellij" "<- Back" --selected"Btop,Nerd Icons,Zellij,Fonts,Mise")
+#
+#  for CHOICE in $CHOICES; do
+#    case "$CHOICE" in
+#    "Bash")
+#      run_install "terminal/bash"
+#      ;;
+#    "Btop")
+#      run_install "terminal/btop"
+#      ;;
+#    "Fonts")
+#      run_install "terminal/fonts"
+#      ;;
+#    "Mise")
+#      run_install "terminal/mise"
+#      ;;
+#    "Nerd Icons")
+#      run_install "terminal/nerd-icons"
+#      ;;
+#    "Zellij")
+#      run_install "terminal/zellij"
+#      ;;
+#    "<- Back")
+#      main_menu
+#      return
+#      ;;
+#    esac
+#  done
+#  main_menu
+#}
+#
+#databases_menu() {
+#  CHOICES=$(gum choose --no-limit "MySQL" "PostgreSQL" "Redis" "<- Back" --selected"PostgreSQL,Redis")
+#
+#  for CHOICE in $CHOICES; do
+#    case "$CHOICE" in
+#    "MySQL")
+#      print "INFO" "MySQL installation not implemented yet"
+#      ;;
+#    "PostgreSQL")
+#      print "INFO" "PostgreSQL installation not implemented yet"
+#      ;;
+#    "Redis")
+#      print "INFO" "Redis installation not implemented yet"
+#      ;;
+#    "<- Back")
+#      main_menu
+#      return
+#      ;;
+#    esac
+#  done
+#  main_menu
+#}
+#
 
 main_menu
