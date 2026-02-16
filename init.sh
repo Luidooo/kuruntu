@@ -15,19 +15,7 @@ if [ -d "$KURUNTU_PATH" ]; then
   echo "git pull" #debug
 else
   echo "Cloning dotfiles repository."
-  echo "sudo git clone $REPO_URL $KURUNTU_PATH"
+  sudo git clone $REPO_URL $KURUNTU_PATH
 fi
 
 cd "$KURUNTU_PATH"
-
-bash $KURUNTU_PATH/utils/ascii.sh
-echo -e "\033[0m"
-
-if [ ! -f $(which gum) ]; then
-  echo "Installing GUM package - Interactive CLI menus for better user experience"
-  echo "Running: sudo snap install gum"
-  sleep 1
-  bash "$KURUNTU_PATH/utils/required/gum.sh"
-fi
-
-bash "$KURUNTU_PATH/utils/menus/welcome.sh"

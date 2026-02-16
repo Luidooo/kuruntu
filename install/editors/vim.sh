@@ -2,14 +2,11 @@
 
 set -e
 
-# Variables
 export KURUNTU_PATH="$HOME/.local/share/kuruntu"
 
-# Install Vim
 sudo apt update
 sudo apt install -y vim
 
-# Configure Vim
 if [ -d "$HOME/.vim" ]; then
   rm -rf "$HOME/.vim"
 fi
