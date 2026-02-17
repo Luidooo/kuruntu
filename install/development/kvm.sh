@@ -18,6 +18,7 @@ sudo apt-get install -y \
   cpu-checker
 
 sudo systemctl enable --now libvirtd
+sudo systemctl start libvirtd
 
 sudo usermod -aG libvirt,kvm "$USER"
 
@@ -25,8 +26,8 @@ if ! sudo virsh net-info default &>/dev/null; then
   sudo virsh net-define /usr/share/libvirt/networks/default.xml
 fi
 
-if [ "$(sudo virsh net-info default | awk '/Active:/{print $2}')" != "yes" ]; then
-  sudo virsh net-start default
-fi
+#if [ "$(sudo virsh net-info default | awk '/Active:/{print $2}')" != "yes" ]; then
+#  sudo virsh net-start default
+#fi
 
-sudo virsh net-autostart default
+sudo virsh net-autostart default || true

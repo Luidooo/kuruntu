@@ -8,6 +8,6 @@ cp $HOME/.bashrc $HOME/.backup_bashrc
 
 rm $HOME/.bashrc
 
-echo "source $KURUNTU_PATH/dots/dots_bash/aliases.sh" >>"$HOME/.bashrc"
-echo "source $KURUNTU_PATH/dots/dots_bash/functions.sh" >>"$HOME/.bashrc"
-echo "source $KURUNTU_PATH/dots/dots_bash/rc.sh" >>"$HOME/.bashrc"
+echo "source $KURUNTU_PATH/dots/dot_bash/aliases.sh" >>"$HOME/.bashrc"
+echo "source $KURUNTU_PATH/dots/dot_bash/functions.sh" >>"$HOME/.bashrc"
+echo "source $KURUNTU_PATH/dots/dot_bash/rc.sh" >>"$HOME/.bashrc"

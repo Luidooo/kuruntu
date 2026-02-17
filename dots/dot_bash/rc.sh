@@ -150,6 +150,9 @@ export SUDO_EDITOR="$EDITOR"
 
 PROMPT_COMMAND=git_branch_name
 
+#enable mise
+eval "$(/home/$USER/.local/bin/mise activate bash)"
+
 #rvm export
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
