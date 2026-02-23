@@ -37,13 +37,64 @@ Plano, +-5 materia por semestre, me formo em 11:
     1- FGA0316 - EPS
     2- FGA0060 - bancos de dados2
     3- FGA0315 - qualidade de soft
-    4- FGA0244 - PSPD
-    5- FGA0302 - eng ambiente
+    4- FGA0244 - PSPD 
+    5- FGA0161 - eng ambiente
     6- FGA0287 - tcc1
 
   11 Semestre
     1- FGA0304 - pi2
     2- FGA0290 - tcc2
+
+
+montando a grade 26.1
+  
+    1- x FGA0137 - bancos de dados1 
+      	Turma 01	GLAUCO VITOR PEDROSA REGULAR - 46M34 (16/03/2026 - 18/07/2026) - S9  120 alunos
+
+    2- FGA0109 - embarcados 
+      Turma 01	RENATO CORAL SAMPAIO		REGULAR - 35T23 (16/03/2026 - 18/07/2026) - MOCAP	80 alunos
+      Turma 02	RENATO CORAL SAMPAIO		REGULAR - 35T45 (16/03/2026 - 18/07/2026) - MOCAP	80 alunos
+
+    3- FGA0317 - GCES
+      Turma 01	CARLA SILVA ROCHA AGUIAR		REGULAR	24T45 (16/03/2026 - 18/07/2026)	FCTE - S3 / S4	90 alunos
+
+    4- FGA0242 - TPPE
+      Turma 01	ANDRE LUIZ PERON MARTINS LANNA		REGULAR	24T45 (16/03/2026 - 18/07/2026)	FCTE - S10	60 alunos
+
+    5- FGA0160 - metodos numericos
+      Turma 01	RODRIGO ANDRES MIRANDA CERDA		REGULAR	24M5 24T1 (16/03/2026 - 18/07/2026)	FCTE - S4	120 alunos
+      Turma 02	RODRIGO ANDRES MIRANDA CERDA		REGULAR	24T23 (16/03/2026 - 18/07/2026)	FCTE - S1 / S4	120 alunos
+
+    4- FGA0244 - PSPD 
+	    Turma 01	DANIEL SUNDFELD LIMA		REGULAR	46M34 (16/03/2026 - 18/07/2026)	FCTE - S10	60 alunos
+      Turma 02	FERNANDO WILLIAM CRUZ		REGULAR	24M5 24T1 (16/03/2026 - 18/07/2026)	FCTE - I10	60 alunos
+
+    5- FGA0161 - eng ambiente
+		  Turma 01	MARIA VITORIA DUARTE FERRARI	46M12 (16/03/2026 - 18/07/2026) FCTE - S3
+		  Turma 02	AUGUSTO CESAR DE MENDONCA BRASIL	24T45 (16/03/2026 - 18/07/2026) FCTE - AUDITÓRIO
+		  Turma 03	JULIANA DALBONI ROCHA	35M34 (16/03/2026 - 18/07/2026) FCTE - S1
+
+    3- FGA0315 - qualidade de soft
+      Turma 01	CRISTIANE SOARES RAMOS		REGULAR	24M34 (16/03/2026 - 18/07/2026)	FCTE - S6	60 alunos
+      Turma 02	CRISTIANE SOARES RAMOS		REGULAR	24T23 (16/03/2026 - 18/07/2026)	FCTE - S6	60 alunos
+
+          segunda - terca - quarta - quinta - sexta - sabado
+  08-10                    engamb            engamb 
+  10-12                      bd1               bd1
+  12-14   met-num          met-num           
+  14-16   quali             quali     
+  16-18   tppe       emb    tppe      emb
+  18-20  
+
+  1 - FGA0137 - bancos de dados1
+  2 - FGA0109 - embarcados
+  3 - FGA0242 - TPPE
+  4 - FGA0160 - metodos numericos
+  5 - FGA0161 - eng ambiente
+  6 - FGA0315 - qualidade de soft
+
+  solicitacao:
+  https://sigaa.unb.br/sigaa/graduacao/matricula/comprovante_solicitacoes.jsf
 
 
 
