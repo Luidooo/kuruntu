@@ -29,16 +29,16 @@ Plano, +-5 materia por semestre, me formo em 11:
   9 semestre
     1- FGA0137 - bancos de dados1
     2- FGA0109 - embarcados
-    3- FGA0317 - GCES
+    3- FGA0315 - qualidade de soft
     4- FGA0242 - TPPE
-    5- FGA0160 - metodos numericos
+    5- FGA0161 - eng ambiente
 
   10 Semestre
     1- FGA0316 - EPS
     2- FGA0060 - bancos de dados2
-    3- FGA0315 - qualidade de soft
+    3- FGA0317 - GCES
     4- FGA0244 - PSPD 
-    5- FGA0161 - eng ambiente
+    5- FGA0160 - metodos numericos
     6- FGA0287 - tcc1
 
   11 Semestre
@@ -79,10 +79,10 @@ montando a grade 26.1
       Turma 02	CRISTIANE SOARES RAMOS		REGULAR	24T23 (16/03/2026 - 18/07/2026)	FCTE - S6	60 alunos
 
           segunda - terca - quarta - quinta - sexta - sabado
-  08-10                    engamb            engamb 
-  10-12                      bd1               bd1
-  12-14   met-num          met-num           
-  14-16   quali             quali     
+  08-10             
+  10-12             engamb   bd1     engamb   bd1
+  12-14   
+  14-16   quali             quali
   16-18   tppe       emb    tppe      emb
   18-20  
 
