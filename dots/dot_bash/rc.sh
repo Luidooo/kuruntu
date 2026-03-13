@@ -1,5 +1,3 @@
-source ~/.local/share/dotfiles/dots/dot_bash/dot_function.sh
-
 # If not running interactively, don't do anything
 case $- in
 *i*) ;;
@@ -100,14 +98,6 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 ####EXPORTS
-eval "$(zoxide init bash)"
-#eval "$(pyenv virtualenv-init -)"
-#eval "$(pyenv init -)"
-#export PATH="/home/luid/.local/bin:$PATH"
-#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # Created by `pipx` on 2025-06-26 14:04:53
 export PATH="$PATH:/home/luid/.local/bin"
@@ -116,9 +106,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 alias n='nvim'
-#eval "$(/usr/bin/rbenv init - bash)"
-#export PATH="./bin:/home/luid/.nvm/versions/node/v22.17.0/bin:/home/luid/.pyenv/shims:/home/luid/.pyenv/bin:/home/luid/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/luid/.local/bin:/home/luid/.local/bin"
-#set +h
 alias r='./bin/rails'
 
 #alias ls='eza -lh --group-directories-first --icons'
@@ -162,3 +149,6 @@ eval "$(/home/$USER/.local/bin/mise activate bash)"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 ## ver as configs
 #gsettings get org.gnome.desktop.input-sources xkb-options
+
+
+eval "$(zoxide init bash)" #this line need to be in the EOF (?)

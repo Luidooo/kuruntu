@@ -3,7 +3,7 @@
 set -e
 
 KURUNTU_PATH="$HOME/.local/share/kuruntu"
-NVIM_PATH="$HOME/.local/share/nvim"
+NVIM_PATH="$HOME/.config/nvim"
 
 sudo snap install nvim --classic
 

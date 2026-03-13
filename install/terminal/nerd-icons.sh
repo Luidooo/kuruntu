@@ -6,7 +6,7 @@ FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBr
 
 set -e
 
-FONTS_DIR="$HOME/.local/share/fonts"
+INSTALL_DIR="$HOME/.local/share/fonts"
 TMP_DIR="/tmp/$FONT_NAME-nerdfont-install"
 
 sudo apt update >/dev/null
