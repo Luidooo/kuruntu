@@ -10,4 +10,4 @@ sudo snap install nvim --classic
 if [ -d $NVIM_PATH ]; then
   rm -rf $NVIM_PATH
 fi
-cp -r "$KURUNTU_PATH/dots/dot_nvim" $NVIM_PATH
+cp -r "$KURUNTU_PATH/dots/nvim" $NVIM_PATH

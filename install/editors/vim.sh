@@ -10,4 +10,4 @@ sudo apt install -y vim
 if [ -d "$HOME/.vim" ]; then
   rm -rf "$HOME/.vim"
 fi
-cp -r "$KURUNTU_PATH/dots/dot_vim" "$HOME/.vim"
+cp -r "$KURUNTU_PATH/dots/vim" "$HOME/.vim"
