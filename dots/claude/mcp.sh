@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 echo "Configuring Claude Code MCP servers (user scope)..."
 
 claude mcp add context7 --scope user --transport stdio \
