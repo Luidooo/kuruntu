@@ -25,3 +25,6 @@ alias r='./bin/rails'
 alias py='python3'
 
 #web developement
+
+#chrome
+alias chrome='google-chrome --remote-debugging-port=9222'
