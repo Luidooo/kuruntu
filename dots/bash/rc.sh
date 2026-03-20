@@ -115,27 +115,12 @@ alias lt='eza --tree --level=1 --icons --git'
 alias bat='batcat'
 export PATH="/home/luid/.nodenv/versions/20.11.1/bin:$PATH"
 
-#branch_name() {
-#  #local BRANCH_ERROR_NAME="$(time)_branch_name.txt"
-#  #git branch --show-current 2>
-#  if [ $? -ne 0 ]; then
-#    CURRENT_BRANCH="/"
-#  else
-#    CURRENT_BRANCH=$(git branch --show-current)
-#  fi
-#}
-
-#PS1+="${YELLOW}($(git branch --show-current 2>/dev/null))${RESET} $ "
-
-YELLOW='\[\033[1;33m\]'
-RESET='\[\033[0m\]'
-
-git_branch_name
+prompt_name
 
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 
-PROMPT_COMMAND=git_branch_name
+PROMPT_COMMAND=prompt_name
 
 #enable mise
 eval "$(/home/$USER/.local/bin/mise activate bash)"
@@ -149,6 +134,5 @@ eval "$(/home/$USER/.local/bin/mise activate bash)"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 ## ver as configs
 #gsettings get org.gnome.desktop.input-sources xkb-options
-
 
 eval "$(zoxide init bash)" #this line need to be in the EOF (?)
