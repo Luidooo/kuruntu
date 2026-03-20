@@ -12,13 +12,11 @@ alias gm='git commit'
 alias gcm='git commit -m'
 alias gc='git clone'
 alias gck='git checkout'
+alias gba='git branch -a'
 alias gp='git push origin'
 
 #grep aliases
-alias gr='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
+alias g='grep --color=auto'
 
 #ruby aliases
 alias r='./bin/rails'
@@ -27,4 +25,3 @@ alias r='./bin/rails'
 alias py='python3'
 
 #web developement
-
