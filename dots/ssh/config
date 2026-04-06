@@ -1,0 +1,10 @@
+# Kuruntu SSH config - install on client machines (swissbook, etc)
+# Copy to ~/.ssh/config or append to existing
+
+Host americanbook
+  HostName americanbook.local
+  User luid
+  ServerAliveInterval 30
+  ServerAliveCountMax 5
+  # Forward OSC 52 clipboard support
+  SetEnv TERM=xterm-256color
