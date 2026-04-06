@@ -1,0 +1,175 @@
+Atalhos do Zellij (modo padrao: locked)
+Fluxo: Ctrl g (desbloqueia) -> tecla do modo -> acao -> Enter/Esc (volta para locked)
+
+================================================================================
+ATALHOS GLOBAIS (funcionam em normal e locked, sem trocar de modo)
+================================================================================
+
+| Atalho          | Acao                                |
+|-----------------|-------------------------------------|
+| Alt h / Alt ←   | Mover foco para esquerda (ou tab)   |
+| Alt j / Alt ↓   | Mover foco para baixo               |
+| Alt k / Alt ↑   | Mover foco para cima                |
+| Alt l / Alt →   | Mover foco para direita (ou tab)    |
+| Alt n           | Novo painel                         |
+| Alt f           | Toggle paineis flutuantes           |
+| Alt + / Alt =   | Aumentar tamanho                    |
+| Alt -           | Diminuir tamanho                    |
+| Alt [           | Layout swap anterior                |
+| Alt ]           | Proximo layout swap                 |
+| Alt i           | Mover tab para esquerda             |
+| Alt o           | Mover tab para direita              |
+
+================================================================================
+TROCA DE MODOS (a partir de normal, apos Ctrl g)
+================================================================================
+
+| Atalho          | Modo                                |
+|-----------------|-------------------------------------|
+| Ctrl g          | Locked <-> Normal                   |
+| Ctrl q          | Sair do Zellij                      |
+| p               | Modo pane                           |
+| t               | Modo tab                            |
+| r               | Modo resize                         |
+| s               | Modo scroll                         |
+| m               | Modo move                           |
+| o               | Modo session                        |
+| Esc / Enter     | Voltar para locked                  |
+
+================================================================================
+MODO PANE (Ctrl g -> p)
+================================================================================
+
+| Atalho          | Acao                                |
+|-----------------|-------------------------------------|
+| h/j/k/l / setas | Mover foco entre paineis           |
+| n               | Novo painel (direcao automatica)    |
+| r               | Novo painel a direita               |
+| d               | Novo painel abaixo                  |
+| x               | Fechar painel atual                 |
+| f               | Fullscreen (tela cheia)             |
+| w               | Toggle paineis flutuantes           |
+| e               | Toggle embed/flutuante              |
+| z               | Toggle bordas dos paineis           |
+| c               | Renomear painel                     |
+| Tab             | Alternar foco entre paineis         |
+| p               | Voltar ao modo normal               |
+
+================================================================================
+MODO TAB (Ctrl g -> t)
+================================================================================
+
+| Atalho          | Acao                                |
+|-----------------|-------------------------------------|
+| h/k / ←/↑      | Tab anterior                        |
+| j/l / ↓/→      | Proxima tab                         |
+| 1 a 9           | Ir direto para tab N                |
+| n               | Nova tab                            |
+| x               | Fechar tab                          |
+| r               | Renomear tab                        |
+| b               | Extrair painel para nova tab        |
+| [               | Mover painel para tab a esquerda    |
+| ]               | Mover painel para tab a direita     |
+| s               | Toggle sync (digitar em todos)      |
+| Tab             | Alternar entre ultima tab usada     |
+| t               | Voltar ao modo normal               |
+
+================================================================================
+MODO RESIZE (Ctrl g -> r)
+================================================================================
+
+| Atalho          | Acao                                |
+|-----------------|-------------------------------------|
+| h / ←           | Aumentar para esquerda              |
+| j / ↓           | Aumentar para baixo                 |
+| k / ↑           | Aumentar para cima                  |
+| l / →           | Aumentar para direita               |
+| H (maiusculo)   | Diminuir da esquerda                |
+| J (maiusculo)   | Diminuir de baixo                   |
+| K (maiusculo)   | Diminuir de cima                    |
+| L (maiusculo)   | Diminuir da direita                 |
+| + / =           | Aumentar geral                      |
+| -               | Diminuir geral                      |
+| r               | Voltar ao modo normal               |
+
+================================================================================
+MODO MOVE (Ctrl g -> m)
+================================================================================
+
+| Atalho          | Acao                                |
+|-----------------|-------------------------------------|
+| h/j/k/l / setas | Mover painel na direcao            |
+| n / Tab         | Mover painel para proxima posicao   |
+| p               | Mover painel para posicao anterior  |
+| m               | Voltar ao modo normal               |
+
+================================================================================
+MODO SCROLL (Ctrl g -> s)
+================================================================================
+
+| Atalho              | Acao                            |
+|---------------------|---------------------------------|
+| j / ↓               | Scroll para baixo (1 linha)     |
+| k / ↑               | Scroll para cima (1 linha)      |
+| d                   | Meia pagina para baixo          |
+| u                   | Meia pagina para cima           |
+| h / ← / Ctrl b / PgUp  | Pagina inteira para cima    |
+| l / → / Ctrl f / PgDn   | Pagina inteira para baixo   |
+| e                   | Editar scrollback no editor     |
+| f                   | Entrar no modo busca            |
+| Ctrl c              | Ir ao final e voltar p/ locked  |
+| s                   | Voltar ao modo normal           |
+
+================================================================================
+MODO SEARCH (dentro do scroll, apos f)
+================================================================================
+
+| Atalho          | Acao                                |
+|-----------------|-------------------------------------|
+| (digitar texto) | Buscar (enquanto em entersearch)    |
+| Enter           | Confirmar busca                     |
+| n               | Proximo resultado                   |
+| p               | Resultado anterior                  |
+| c               | Toggle case sensitive               |
+| w               | Toggle wrap                         |
+| o               | Toggle palavra inteira              |
+| Esc / Ctrl c    | Cancelar busca                      |
+
+================================================================================
+MODO SESSION (Ctrl g -> o)
+================================================================================
+
+| Atalho          | Acao                                |
+|-----------------|-------------------------------------|
+| d               | Detach (desconectar da sessao)      |
+| w               | Gerenciador de sessoes (plugin)     |
+| c               | Configuracao (plugin)               |
+| p               | Gerenciador de plugins              |
+| o               | Voltar ao modo normal               |
+
+================================================================================
+MODO RENOMEAR
+================================================================================
+
+| Contexto        | Como usar                           |
+|-----------------|-------------------------------------|
+| Renomear tab    | t -> r -> digitar nome -> Enter     |
+|                 | Esc cancela, Ctrl c volta p/ locked |
+| Renomear pane   | p -> c -> digitar nome -> Enter     |
+|                 | Esc cancela, Ctrl c volta p/ locked |
+
+================================================================================
+RESUMO RAPIDO DOS MAIS USADOS
+================================================================================
+
+| O que voce quer fazer       | Atalho                          |
+|-----------------------------|---------------------------------|
+| Novo painel rapido          | Alt n                           |
+| Esconder/mostrar flutuantes | Alt f                           |
+| Painel em tela cheia        | Ctrl g -> p -> f                |
+| Fechar painel               | Ctrl g -> p -> x                |
+| Redimensionar               | Alt +/- ou Ctrl g -> r -> hjkl  |
+| Nova tab                    | Ctrl g -> t -> n                |
+| Navegar entre paineis       | Alt h/j/k/l                     |
+| Navegar entre tabs          | Alt h/l                         |
+| Detach da sessao            | Ctrl g -> o -> d                |
