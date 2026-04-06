@@ -2,12 +2,13 @@
 
 set -e
 
-export KURUNTU_PATH="$HOME/.local/share/kuruntu"
+KURUNTU_PATH="$HOME/.local/share/kuruntu"
 
 sudo apt update
 sudo apt install -y vim
 
-if [ -d "$HOME/.vim" ]; then
+if [ -e "$HOME/.vim" ]; then
   rm -rf "$HOME/.vim"
 fi
-cp -r "$KURUNTU_PATH/dots/vim" "$HOME/.vim"
+
+ln -sf "$KURUNTU_PATH/dots/vim" "$HOME/.vim"

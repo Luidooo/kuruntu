@@ -7,7 +7,8 @@ NVIM_PATH="$HOME/.config/nvim"
 
 sudo snap install nvim --classic
 
-if [ -d $NVIM_PATH ]; then
-  rm -rf $NVIM_PATH
+if [ -e "$NVIM_PATH" ]; then
+  rm -rf "$NVIM_PATH"
 fi
-cp -r "$KURUNTU_PATH/dots/nvim" $NVIM_PATH
+
+ln -sf "$KURUNTU_PATH/dots/nvim" "$NVIM_PATH"
