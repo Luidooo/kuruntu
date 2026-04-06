@@ -16,7 +16,7 @@ alias gba='git branch -a'
 alias gp='git push origin'
 
 #grep aliases
-alias g='grep --color=auto'
+alias gr='grep --color=auto'
 
 #ruby aliases
 alias r='./bin/rails'

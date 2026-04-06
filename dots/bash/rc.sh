@@ -130,9 +130,16 @@ eval "$(/home/$USER/.local/bin/mise activate bash)"
 
 ### para reverter tudo
 #gsettings set org.gnome.desktop.input-sources xkb-options "[]"
-### swap caps lock to esc
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+### swap caps lock to esc (only with display, not over SSH)
+if [[ -n "$DISPLAY" || -n "$WAYLAND_DISPLAY" ]]; then
+  gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+fi
 ## ver as configs
 #gsettings get org.gnome.desktop.input-sources xkb-options
 
 eval "$(zoxide init bash)" #this line need to be in the EOF (?)
+
+# Auto-attach zellij on SSH sessions
+if [[ -n "$SSH_CONNECTION" ]] && [[ -z "$ZELLIJ" ]] && command -v zellij &>/dev/null; then
+  zellij attach --create main
+fi

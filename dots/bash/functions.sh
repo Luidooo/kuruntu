@@ -1,5 +1,12 @@
 prompt_name() {
-  local prompt_path="${BLUE}\u@\h:\w${RESET}"
+  local host_color
+  case "$(hostname)" in
+    americanbook) host_color="${BOLD_GREEN}" ;;
+    swissbook)    host_color="${BOLD_CYAN}" ;;
+    *)            host_color="${BOLD_MAGENTA}" ;;
+  esac
+
+  local prompt_path="${host_color}\u@\h${RESET}:${BLUE}\w${RESET}"
   local git_info=""
   local branch_name=$(git branch --show-current 2>/dev/null)
 
@@ -10,7 +17,6 @@ prompt_name() {
   fi
 
   PS1="${prompt_path} ${git_info} \$ "
-
 }
 prompt_name
 
