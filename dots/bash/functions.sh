@@ -20,6 +20,12 @@ prompt_name() {
 }
 prompt_name
 
+clip() {
+  local data
+  data=$(base64 < "${1:-/dev/stdin}" | tr -d '\n')
+  printf '\033]52;c;%s\a' "$data"
+}
+
 httpcats() {
   google-chrome "https://http.cat/$1"
 }
