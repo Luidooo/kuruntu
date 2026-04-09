@@ -138,8 +138,3 @@ fi
 #gsettings get org.gnome.desktop.input-sources xkb-options
 
 eval "$(zoxide init bash)" #this line need to be in the EOF (?)
-
-# Auto-attach zellij on SSH sessions
-if [[ -n "$SSH_CONNECTION" ]] && [[ -z "$ZELLIJ" ]] && command -v zellij &>/dev/null; then
-  zellij attach --create main
-fi
