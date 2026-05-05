@@ -1,20 +1,47 @@
-Vamos planejar minha rotina de forma que temos equilibrio entre minha vida academica, minha vida profissinal e minha vida de saude
+Vamos planejar minha rotina de forma que temos equilibrio entre minha vida academica, minha vida profissinal e minha vida vida
 
 Vida pessoal, objetivos:
-  - Meia maratona em x meses(me recomende a quantidade de meses boa para isso)
+  - Meia maratona em 15/07/2026(aniversario do meu amor) (10 semanas a partir de 05/05)
   - Aulas de boxing 2 vezes na semana
   - Manter uma constancia na academia, em musculacao
-  - dormir no minimo 6 horas por noite
+  - dormir no minimo 6 horas (7h durante semanas de pico: 6, 7, 9)
 
-O objetivo principal, é definirmos uma rotina de segunda a domingo misturando os treinos de musculacao, fortalecimento, combinando box e treinos de corrida
-Mantendo uma quantia de horas dedicada ao trabalho formal e tempos de estudos
+Compromissos da meia em 10 semanas:
+  1. Objetivo = completar saudavel, nao cravar tempo
+  2. Treino em peito/costas/ombro/bracos (seg+sex)
+     Treino de Pernas em manutencao (protegidas para a corrida)
+  3. Boxe em manutencao (2x/semana)
+  4. 7h de sono nas semanas de pico (6, 7, 9), 6h minimo no resto
+  5. Pos-prova (apos 15/07): bloco de hipertrofia full body com pernas pesadas
 
 
 Legendas:
-  TRAB = trabalho formal    STUP = startup    EST = estudo
-  MUSC = musculacao         BOX  = boxe       RUN = corrida
-  SONO = dormir             REF  = refeicao   LIV = livre/lazer
-  DESL = deslocamento       BANHO = banho/higiene
+  HBR     = trabalho formal      STUP    = startup           DAILY = reuniao diaria
+  INLOCO  = trabalho presencial  CAFE    = cafe da manha     ALMOCAR = almoco
+  ACORDAR = acordar              SONO    = dormir            
+          = refeicao/lanche      JANTAR  = jantar            EST   = estudo livre
+  MUSC    = musculacao           BOX     = boxe
+  RUN-EZ  = corrida facil        RUN-T   = corrida tempo     LONG-RUN = corrida longa
+
+  Faculdade:
+    BD1   = Banco de Dados 1   (qua e sex, 10:00-12:00)
+    QUAL  = Qualidade          (seg e qua, 14:00-16:00)
+    TPPE  = TPPE               (seg e qua, 16:00-18:00)
+    EMB   = Embarcados         (ter e qui, 16:00-18:00)
+
+
+Plano de corrida por semana (volume e long run):
+  Sem 1  (05-11/mai)  : 18km total | long 8km   | 3 corridas
+  Sem 2  (12-18/mai)  : 22km       | long 11km  | 3 corridas
+  Sem 3  (19-25/mai)  : 26km       | long 13km  | 3 corridas
+  Sem 4  (26mai-01jun): 20km DELOAD| long 10km  | 3 corridas
+  Sem 5  (02-08/jun)  : 30km       | long 15km  | 3-4 corridas
+  Sem 6  (09-15/jun)  : 34km PICO  | long 17km  | 4 corridas  -> 7h sono
+  Sem 7  (16-22/jun)  : 36km PICO  | long 18km  | 4 corridas  -> 7h sono
+  Sem 8  (23-29/jun)  : 26km DELOAD| long 13km  | 3 corridas
+  Sem 9  (30jun-06jul): 30km       | long 14km  | 3 corridas  -> 7h sono
+  Sem 10 (07-13/jul)  : 18km TAPER | long 10km  | 3 corridas
+  Sem 11 (14-15/jul)  : PROVA 21.1km no dia 15/07 (terca-feira)
 
 
 +-------+------------+------------+------------+------------+------------+------------+------------+
@@ -38,71 +65,71 @@ Legendas:
 +-------+------------+------------+------------+------------+------------+------------+------------+
 | 04:00 |            |            |            |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 04:30 |            |            |            |            |            |            |            |
+| 04:30 |  ACORDAR   |  ACORDAR   |  ACORDAR   |  ACORDAR   |  ACORDAR   |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 05:00 |            |            |            |            |            |            |            |
+| 05:00 |  HBR       |  HBR       |  HBR       |  HBR       |  HBR       |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 05:30 |            |            |            |            |            |            |            |
+| 05:30 |  HBR       |  HBR       |  HBR       |  HBR       |  HBR       |            |  ACORDAR   |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 06:00 |            |            |            |            |            |            |            |
+| 06:00 |  HBR       |  HBR       |  HBR       |  HBR       |  HBR       |            |  LONG-RUN  |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 06:30 |            |            |            |            |            |            |            |
+| 06:30 |  HBR       |  HBR       |  HBR       |  HBR       |  HBR       |            |  LONG-RUN  |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 07:00 |            |            |            |            |            |            |            |
+| 07:00 |  CAFE      |  CAFE      |  CAFE      |  CAFE      |  CAFE      |  ACORDAR   |  LONG-RUN  |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 07:30 |            |            |            |            |            |            |            |
+| 07:30 |  CAFE      |  CAFE      |  CAFE      |  CAFE      |  CAFE      |  CAFE      |  LONG-RUN  |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 08:00 |            |            |            |            |            |            |            |
+| 08:00 |  HBR       |  HBR       |  HBR       |  HBR       |  HBR       |  CAFE      |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 08:30 |            |            |            |            |            |            |            |
+| 08:30 |  HBR       |  HBR       |  HBR       |  HBR       |  HBR       |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 09:00 |            |            |            |            |            |            |            |
+| 09:00 |  DAILY     |  DAILY     |  DAILY     |  DAILY     |  DAILY     |  BOX       |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 09:30 |            |            |            |            |            |            |            |
+| 09:30 |            |            |            |            |            |  BOX       |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 10:00 |            |            |            |            |            |            |            |
+| 10:00 |  INLOCO    |            |  BD1       |            |  BD1       |  BOX       |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 10:30 |            |            |            |            |            |            |            |
+| 10:30 |  INLOCO    |            |  BD1       |            |  BD1       |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 11:00 |            |            |            |            |            |            |            |
+| 11:00 |  INLOCO    |            |  BD1       |            |  BD1       |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 11:30 |            |            |            |            |            |            |            |
+| 11:30 |  INLOCO    |            |  BD1       |            |  BD1       |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 12:00 |            |            |            |            |            |            |            |
+| 12:00 |  ALMOCAR   |  ALMOCAR   |  ALMOCAR   |  ALMOCAR   |  ALMOCAR   |            |  ALMOCAR   |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 12:30 |            |            |            |            |            |            |            |
+| 12:30 |  ALMOCAR   |  ALMOCAR   |  ALMOCAR   |  ALMOCAR   |  ALMOCAR   |            |  ALMOCAR   |
 +-------+------------+------------+------------+------------+------------+------------+------------+
 | 13:00 |            |            |            |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
 | 13:30 |            |            |            |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 14:00 |            |            |            |            |            |            |            |
+| 14:00 |  QUAL      |            |  QUAL      |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 14:30 |            |            |            |            |            |            |            |
+| 14:30 |  QUAL      |            |  QUAL      |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 15:00 |            |            |            |            |            |            |            |
+| 15:00 |  QUAL      |            |  QUAL      |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 15:30 |            |            |            |            |            |            |            |
+| 15:30 |  QUAL      |            |  QUAL      |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 16:00 |            |            |            |            |            |            |            |
+| 16:00 |  TPPE      |  EMB       |  TPPE      |  EMB       |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 16:30 |            |            |            |            |            |            |            |
+| 16:30 |  TPPE      |  EMB       |  TPPE      |  EMB       |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 17:00 |            |            |            |            |            |            |            |
+| 17:00 |  TPPE      |  EMB       |  TPPE      |  EMB       |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 17:30 |            |            |            |            |            |            |            |
+| 17:30 |  TPPE      |  EMB       |  TPPE      |  EMB       |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 18:00 |            |            |            |            |            |            |            |
+| 18:00 |            |            |            |            |  MUSC      |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 18:30 |            |            |            |            |            |            |            |
+| 18:30 |  MUSC      |  RUN-EZ    |  BOX       |  RUN-T     |  MUSC      |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 19:00 |            |            |            |            |            |            |            |
+| 19:00 |  MUSC      |  RUN-EZ    |  BOX       |  RUN-T     |  MUSC      |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 19:30 |            |            |            |            |            |            |            |
+| 19:30 |  MUSC      |            |  BOX       |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 20:00 |            |            |            |            |            |            |            |
+| 20:00 |            |  JANTAR    |            |  JANTAR    |  JANTAR    |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
-| 20:30 |            |            |            |            |            |            |            |
+| 20:30 |  JANTAR    |            |  JANTAR    |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
 | 21:00 |            |            |            |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
@@ -116,3 +143,196 @@ Legendas:
 +-------+------------+------------+------------+------------+------------+------------+------------+
 | 23:30 |            |            |            |            |            |            |            |
 +-------+------------+------------+------------+------------+------------+------------+------------+
+
+
+Resumo da semana de treinos:
+  Seg  18:30-20:00 - MUSC PUSH hipertrofia (peito/ombro/triceps)
+  Ter  18:30-19:30 - RUN easy (zona 2, conversavel)
+  Qua  18:30-20:00 - BOX
+  Qui  18:30-19:30 - RUN tempo/intervalos (zona 4)
+  Sex  18:00-19:30 - MUSC PULL hipertrofia (costas/biceps) + 15min lower/core leve
+  Sab  09:00-10:30 - BOX 
+  Dom  06:00-08:00 - LONG RUN (duracao varia conforme a semana)
+
+  Total semana pico:
+    - 3 corridas (~36km)
+    - 2 boxe
+    - 2 musc (1 sup + 1 inf leve)
+    - sab manha leve em deload
+
+
+Pontos de atencao / riscos:
+  - Domingo: long run de 17-18km no pico = 2h. Levantar 5:30 = sono Sab as 22:00.
+  - Quinta tempo + Sex MUSC: ambos podem causar fadiga acumulada. Se canela
+    ou joelho doer na 5a/6a feira, troca MUSC sex por mobilidade leve.
+  - Sex noite e a unica que pode estender (jantar fora etc) - sono so as 23:00.
+  - HBR formal: 3.5h fixos no quadro (5-7, 8-9, 9:00-9:30 daily). Faltam ~2.5h
+    diarias - encaixar nos blocos vazios da manha (9:30-12:00 ter/qui).
+  - Seg 10:00-12:00 ja preenchido com INLOCO (trabalho presencial).
+  - 15/07/2026 cai numa QUARTA-FEIRA. Confirmar se a prova e nessa data ou no
+    domingo mais proximo (12 ou 19/07).
+
+
+==============================================================================
+DETALHAMENTO SEMANA A SEMANA - PLANO DE CORRIDA
+==============================================================================
+
+Pace zones de referencia (baseados no seu 5k em 30min = 6:00/km):
+  - EASY / LONG : 6:45-7:00/km    (conversavel, FC ~70-75%)
+  - TEMPO       : 5:45/km         (5:30 nas semanas finais)
+  - RACE PACE   : 6:15/km         (alvo da prova)
+  - STRIDES/INT : 5:00-5:30/km    (curtos, explosivos)
+
+Regra de ouro: 80% do volume em pace EASY, 20% forte.
+Erro mais comum: fazer "easy" a 6:00/km (que e moderado). Force pra 6:45+.
+
+
+------------------------------------------------------------------------------
+SEMANA 1 (05-11/mai) | 18km | LONG 8km | base inicial
+------------------------------------------------------------------------------
+  Ter 05  RUN-EZ      5km @ 6:45-7:00/km                          ~34min
+  Qui 07  RUN-PROG    5km progressivo: 2km easy + 2km mod + 1km T ~32min
+  Dom 10  LONG        8km @ 6:45-7:00/km                          ~56min
+
+  Foco: estabelecer ritmo de 3 corridas/semana. NAO correr a 6:00/km.
+  Geis: nenhum.
+
+
+------------------------------------------------------------------------------
+SEMANA 2 (12-18/mai) | 22km | LONG 11km | introducao tempo
+------------------------------------------------------------------------------
+  Ter 12  RUN-EZ      5km @ 6:45/km                               ~34min
+  Qui 14  RUN-T (1a)  1.5km WU + 3km TEMPO @ 5:45 + 1.5km CD     ~38min
+  Dom 17  LONG        11km @ 6:45-7:00/km                         ~76min
+
+  Foco: primeiro tempo controlado. Conversa de 1 frase, nao duas.
+  Geis: 0-1 (testar gel no long run, km 8).
+
+
+------------------------------------------------------------------------------
+SEMANA 3 (19-25/mai) | 26km | LONG 13km | consolidacao
+------------------------------------------------------------------------------
+  Ter 19  RUN-EZ      5km @ 6:45/km
+  Qui 21  RUN-T       1.5km WU + 5km TEMPO @ 5:45 + 1.5km CD
+  Dom 24  LONG        13km @ 6:45-7:00/km                         ~90min
+
+  Foco: long run > 12km pela 1a vez. Hidratar a cada 5km.
+  Geis: 1 no km 8 do long.
+
+
+------------------------------------------------------------------------------
+SEMANA 4 (26mai-01jun) | 20km | LONG 10km | DELOAD
+------------------------------------------------------------------------------
+  Ter 26  RUN-EZ      4km @ 7:00/km
+  Qui 28  RUN-EZ      6km @ 7:00/km   (ZERO quality)
+  Dom 31  LONG        10km @ 7:00/km
+
+  Mudancas: Sab BOX -> caminhada + alongamento. Sex MUSC -> mobilidade.
+  Sinal de deload bem feito: terminar a semana querendo correr mais.
+
+
+------------------------------------------------------------------------------
+SEMANA 5 (02-08/jun) | 30km | LONG 15km | volume
+------------------------------------------------------------------------------
+  Ter 02  RUN-EZ      6km @ 6:45/km
+  Qui 04  RUN-T       1.5km WU + 5km TEMPO @ 5:45 + 2.5km CD
+  Dom 07  LONG        15km @ 6:45-7:00/km                         ~1h45
+
+  Foco: pace nao pode subir nos ultimos km do long.
+  Geis: 1 no km 8 do long.
+
+
+------------------------------------------------------------------------------
+SEMANA 6 (09-15/jun) | 34km | LONG 17km | PICO 1 -- SONO 7H
+------------------------------------------------------------------------------
+  Ter 09  RUN-EZ      7km @ 6:45/km
+  Qui 11  RUN-T       2km WU + 6km TEMPO @ 5:45 + 2km CD
+  Dom 14  LONG        17km @ 6:45-7:00/km                         ~2h00
+
+  *** SONO 7H OBRIGATORIO. Bed 21:30 seg-qui. ***
+  Long de 17km = simulacao: tenis de prova, cafe identico ao 15/07.
+  Geis: 2 no long (km 8 e km 14).
+
+
+------------------------------------------------------------------------------
+SEMANA 7 (16-22/jun) | 36km | LONG 18km | PICO MAX -- SONO 7H
+------------------------------------------------------------------------------
+  Ter 16  RUN-EZ      7km @ 6:45/km
+  Qui 18  CRUISE INT  2km WU + 3x(2km @ 5:45 + 1km trote) + 1km CD = 11km
+  Dom 21  LONG-KEY    18km @ 6:45-7:00/km                         ~2h05
+
+  *** SEMANA MAIS DIFICIL DO PLANO. Long 18km = ensaio geral. ***
+  Se completar tranquilo a long -> voce termina a meia.
+  Geis: 2-3 no long (km 8, km 13, km 16). Hidratar a cada 4km.
+
+
+------------------------------------------------------------------------------
+SEMANA 8 (23-29/jun) | 26km | LONG 13km | DELOAD
+------------------------------------------------------------------------------
+  Ter 23  RUN-EZ      5km @ 7:00/km
+  Qui 25  RUN-EZ      8km @ 7:00/km   (ZERO quality)
+  Dom 28  LONG        13km @ 7:00/km
+
+  MUSC e BOX em modo leve.
+
+
+------------------------------------------------------------------------------
+SEMANA 9 (30jun-06jul) | 30km | LONG 14km | SHARPENING -- SONO 7H
+------------------------------------------------------------------------------
+  Ter 30  RUN-EZ      7km @ 6:45/km
+  Qui 02  RUN-MP      2km WU + 5km @ RACE PACE 6:15 + 1.5km CD   ~55min
+  Dom 05  LAST LONG   14km @ 6:30-6:45/km (um pouco mais rapido) ~1h35
+
+  Foco: acostumar pernas e cabeca com pace de prova.
+  Long de domingo = ULTIMO long do plano. Tudo identico ao dia da prova
+  (tenis, roupa, cafe, horario).
+  Geis: 2 no long em pace 6:30.
+
+
+------------------------------------------------------------------------------
+SEMANA 10 (07-13/jul) | ~18km | TAPER
+------------------------------------------------------------------------------
+  Ter 07  RUN-EZ      5km @ 6:45/km
+  Qui 09  RUN-AFIADA  1.5km WU + 5x 400m @ 5:30 com 200m trote + 1.5km CD
+  Dom 12  LONG-CURTO  8km @ 6:30/km
+
+  Principio: MENOS volume, MANTEM intensidade. Pernas nao podem "dormir".
+  MUSC e BOX drasticamente leves. Sex MUSC = so mobilidade.
+  Sab BOX = troca por alongamento.
+
+
+------------------------------------------------------------------------------
+SEMANA 11 (13-15/jul) | RACE WEEK
+------------------------------------------------------------------------------
+  Seg 13  REST total + caminhada leve 20min
+  Ter 14  SHAKE OUT   3km easy @ 7:00/km + 4 strides 100m
+  *** QUA 15  PROVA 21.1km @ 6:15-6:30/km   meta: 2h12-2h17 ***
+
+  Estrategia de prova:
+    Km  1- 5: 6:30/km (LENTO de proposito, ignora quem te ultrapassa)
+    Km  6-15: 6:15/km (cruzeiro, manter)
+    Km 16-19: 6:15-6:00/km (decisao: se sente bem, acelera)
+    Km 20-21: 5:45-6:00/km (tudo o que sobrou)
+
+  Geis: 1 (15min antes largada) + km 7 + km 14 + (opcional km 18)
+
+  Pre-prova:
+    Sab 11 e Dom 12: carbo (massa, arroz). Evitar comida nova.
+    Seg 13 e Ter 14: hidratacao consciente.
+    Manha qua 15: acordar 3h antes da largada. Cafe identico aos longs.
+
+
+------------------------------------------------------------------------------
+RESUMO RAPIDO - LONG RUNS POR SEMANA
+------------------------------------------------------------------------------
+  Sem  1: 8km    (56min)   0 geis
+  Sem  2: 11km   (76min)   0-1 gel
+  Sem  3: 13km   (90min)   1 gel
+  Sem  4: 10km   (70min)   1 gel    DELOAD
+  Sem  5: 15km   (1h45)    1 gel
+  Sem  6: 17km   (2h00)    2 geis   PICO 1
+  Sem  7: 18km   (2h05)    2-3 geis PICO MAX (ensaio)
+  Sem  8: 13km   (90min)   1 gel    DELOAD
+  Sem  9: 14km   (1h35)    2 geis   em race pace 6:30
+  Sem 10: 8km    (50min)   0 geis   TAPER
+  Sem 11: 21.1km (2h12-2h17) 3-4 geis PROVA
